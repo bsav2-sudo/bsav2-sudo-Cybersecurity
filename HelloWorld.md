@@ -1,6 +1,8 @@
 # Hello World 
 
-## [WhoIs - Ben Savage] 🔍
+### [WhoIs - Ben Savage] 🔍
+
+
 
 **Found 3 Results for Ben Savage**
 
@@ -8,9 +10,13 @@
 [TryHackMe](https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3580125) 
 [Microsoft Learn](https://learn.microsoft.com/en-us/users/bensavage-6071/transcript/d84jxixjxkl50ke)
 
+### Professional Statements
 
+I am Ben Savage, a former **Live Events Technician** moving into the world of Cybersecurity - focusing on Network Analysis and Memory Forensics; from conducting my own lab tests to analysing exisiting samples from online sources. From the world of Live Events, I have brought my exisiting networking knowledge and applied it into new areas of the IT World - working with tools such as **WireShark, Scapy, Snort** and **more** to improve my knowledge and test new ideas. I also frequently stay up to date with the latest in Cybersecurity news while also completing CTF's and Labs online. 
 
-I am a former **Live Events Tehcnician** moving into the world of Cybersecurity - focusing on Network Analysis and Memory Forensics from conducting my own lab tests to analysing exisiting samples from online sources. From the world of Live Events, I have brought my exisiting networking knowledge and applied it into new areas of the IT World - working with tools such as **WireShark, Scapy, Snort** and **more** to improve my knowledge and test new ideas. I also frequently stay up to date with the latest in Cybersecurity news while also completing CTF's and Labs online. 
+Recently, I have been performing **Network Analysis** using **Wirehsark and Scapy** to look at exisiting malicious pcap files that have been submitted online for practice while also researching the ways in which an attack on a network might be commited from a Red Team perspective.
+
+While also completing my labs and research, I am currently in the process of revising and studying for the <code>Certified Information Systems Security Professional Certification</code> and also the <code>GIAC Intrusion Analyst Certification.</code>
 
 ### Certifications:
 <p>  Cisco Certified Support Technician (Networking) </p>
@@ -23,12 +29,15 @@ I am a former **Live Events Tehcnician** moving into the world of Cybersecurity 
 
 - Eric Zimmerman Tools
 - FTK Imager
+- Kali Linux OS
+- Microsoft Sentiel
 - Microsoft Office Applications
+- Microsoft Windows 11 OS
 - Nmap
 - Powerline: Redline
 - RegistryExplorer
 - Scapy
-- Splunk
+- Splunk Enterprise
 - Sutrica
 - System Informer
 - Volatility3
