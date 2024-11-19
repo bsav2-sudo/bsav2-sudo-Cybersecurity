@@ -1,15 +1,39 @@
-# Hello World - I am Ben
+# Hello World 
 
-## [WhoIs - Ben Savage]
+## [WhoIs - Ben Savage] 🔍
 
-[Linkedin](https://www.linkedin.com/in/ben-savage-b194a3252?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Blqojxf8OQGmflO84%2BSOlQA%3D%3D)
+**Found 3 Results for Ben Savage**
+
+[Linkedin](https://www.linkedin.com/in/ben-savage-b194a3252?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Blqojxf8OQGmflO84%2BSOlQA%3D%3D) 
+[TryHackMe](https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3580125) 
+[Microsoft Learn](https://learn.microsoft.com/en-us/users/bensavage-6071/transcript/d84jxixjxkl50ke)
+
 
 
 I am a former **Live Events Tehcnician** moving into the world of Cybersecurity - focusing on Network Analysis and Memory Forensics from conducting my own lab tests to analysing exisiting samples from online sources. From the world of Live Events, I have brought my exisiting networking knowledge and applied it into new areas of the IT World - working with tools such as **WireShark, Scapy, Snort** and **more** to improve my knowledge and test new ideas. I also frequently stay up to date with the latest in Cybersecurity news while also completing CTF's and Labs online. 
 
 ### Certifications:
-<p>Cisco Certified Support Technician (Networking)</p>
-<p>ISC2 - CCCourse Conlusion and Final Assesment</p>
+<p>  Cisco Certified Support Technician (Networking) </p>
+<p>  ISC2 - CCCourse Conlusion and Final Assesment </p>
+<p>  Cisco Networking Academy - Ethical Hacker Course </p>
+
+# Portfolio
+
+### Tools 🖥️🥼
+
+- Eric Zimmerman Tools
+- FTK Imager
+- Microsoft Office Applications
+- Nmap
+- Powerline: Redline
+- RegistryExplorer
+- Scapy
+- Splunk
+- Sutrica
+- System Informer
+- Volatility3
+- Wireshark
+
 
 
 <!--
