@@ -2,8 +2,6 @@
 
 ### [WhoIs - Ben Savage] 🔍
 
-
-
 **Found 3 Results for Ben Savage**
 
 [Linkedin](https://www.linkedin.com/in/ben-savage-b194a3252?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Blqojxf8OQGmflO84%2BSOlQA%3D%3D) 
