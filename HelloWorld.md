@@ -1,4 +1,4 @@
-# Hello World 
+# Ben Savage Cybersecurity Portfolio
 
 ### [WhoIs - Ben Savage] 🔍
 
@@ -17,20 +17,38 @@ Recently, I have been performing **Network Analysis** using **Wirehsark and Scap
 While also completing my labs and research, I am currently in the process of revising and studying for the <code>Certified Information Systems Security Professional Certification</code> and also the <code>GIAC Intrusion Analyst Certification.</code>
 
 ### Certifications:
-<p>  Cisco Certified Support Technician (Networking) </p>
-<p>  ISC2 - CCCourse Conlusion and Final Assesment </p>
-<p>  Cisco Networking Academy - Ethical Hacker Course </p>
+<p>  💻 Cisco Certified Support Technician (Networking) </p>
+<p>  👓 ISC2 - CCCourse Conlusion and Final Assesment </p>
+<p>  👨‍💻 Cisco Networking Academy - Ethical Hacker Course </p>
+<p>  🖥️ Security Blue Team - Introduction to Threat Hunting </p>
+<p>  ⌛ SC-200: Perform Threat Hunting in Microsoft Sentiel </p>
 
 # Portfolio
 
+### Skills
+
+|   Projects          | Skills and Knowledge Gained |  
+|---------------------|-----------------------------|
+| 1. Network Analysis |                             | 
+|                     |                             |   
+                 
+
+### Labs and Projects
+
+Listed below are some of the highlighted projects/labs I have completed as part of my Cybersecurity Portfolio - ranging from Network Analysis to real-world investigations into emerging technqiues that are being used in the world of Cybersecurity.
+
+// ERROR 404: File Not Found
+
 ### Tools 🖥️🥼
+
+Listed below are some of the tools that I have learnt and actively used:
 
 - Eric Zimmerman Tools
 - FTK Imager
-- Kali Linux OS
+- Kali Linux
 - Microsoft Sentiel
 - Microsoft Office Applications
-- Microsoft Windows 11 OS
+- Microsoft Windows 11 
 - Nmap
 - Powerline: Redline
 - RegistryExplorer
