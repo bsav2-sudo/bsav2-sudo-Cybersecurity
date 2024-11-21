@@ -55,7 +55,8 @@ Listed below are some of the tools that I have learnt and actively used:
 - Kali Linux
 - Microsoft Sentiel
 - Microsoft Office Applications
-- Microsoft Windows 11 
+- Microsoft Windows 11
+- Nessus
 - Nmap
 - Powerline: Redline
 - RegistryExplorer
