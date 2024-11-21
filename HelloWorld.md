@@ -12,7 +12,7 @@
 
 I am Ben Savage, a former **Live Events Technician** moving into the world of Cybersecurity - focusing on Network Analysis and Memory Forensics; from conducting my own lab tests to analysing exisiting samples from online sources. From the world of Live Events, I have brought my exisiting networking knowledge and applied it into new areas of the IT World - working with tools such as **WireShark, Scapy, Snort** and **more** to improve my knowledge and test new ideas. I also frequently stay up to date with the latest in Cybersecurity news while also completing CTF's and Labs online. 
 
-Recently, I have been performing **Network Analysis** using **Wirehsark and Scapy** to look at exisiting malicious pcap files that have been submitted online for practice while also researching the ways in which an attack on a network might be commited from a Red Team perspective.
+Recently, I have been performing **Network Analysis** using **Wirehsark and Scapy** to look at exisiting malicious pcap files that have been submitted online for practice while also researching the ways in which an attack on a network might be commited from a Red Team perspective. I bring professionalism, a unique approach to challanges and 
 
 While also completing my labs and research, I am currently in the process of revising and studying for the <code>Certified Information Systems Security Professional Certification</code> and also the <code>GIAC Intrusion Analyst Certification.</code>
 
@@ -25,19 +25,26 @@ While also completing my labs and research, I am currently in the process of rev
 
 # Portfolio
 
-### Skills
+### Projects
 
-|   Projects          | Skills and Knowledge Gained |  
-|---------------------|-----------------------------|
-| 1. Network Analysis |                             | 
-|                     |                             |   
-                 
+|   Projects                                                 | Skills and Knowledge Gained |  
+|------------------------------------------------------------|-----------------------------|                   
+| 1. Network Analysis with Wireshark                         |                              
+| 2. Packet Manipulation with Scapy                          |  
+| 3. IDS and IPS with Snort                                  |
+| 4. Personal Memory Forensics                               |
+| 5. Vulnerability Assesment with Nessus                     |
+| 6. Further PCAP Analysis with Wireshark                    |
+| 7. SIEM with Splunk Enterprise                             |
+| 8. Investigation into Emerging Techniques in Cybersecurity |               
 
-### Labs and Projects
+### Labs 
 
 Listed below are some of the highlighted projects/labs I have completed as part of my Cybersecurity Portfolio - ranging from Network Analysis to real-world investigations into emerging technqiues that are being used in the world of Cybersecurity.
 
-// ERROR 404: File Not Found
+#### 1. Network Analysis with Wireshark
+
+In this project, I use **Wireshark** to analyse existing PCAP files to look at normal and malicous traffic behaviour to differentiate and find IOC's through these PCAP's. These include looking at the <code>TCP and UDP Protocols </code> , <code> HTTP Requests and Posts </code> , <code> IPv4 and ARP Traffic </code> and more. This project looks at a range of PCAP files such as DOS attacks, Malware Analysis, Scanning via nmap and more.
 
 ### Tools 🖥️🥼
 
