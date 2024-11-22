@@ -44,7 +44,21 @@ Listed below are some of the highlighted projects/labs I have completed as part 
 
 #### 1. Network Analysis with Wireshark
 
+<code>Wireshark</code> <code>IPv4 and IPv6</code> <code>TCP and UDP</code> <code>Network Forensics</code> <code>Traffic Analysis</code>
+
 In this project, I use **Wireshark** to analyse existing PCAP files to look at normal and malicous traffic behaviour to differentiate and find IOC's through these PCAP's. These include looking at the <code>TCP and UDP Protocols </code> , <code> HTTP Requests and Posts </code> , <code> IPv4 and ARP Traffic </code> and more. This project looks at a range of PCAP files such as DOS attacks, Malware Analysis, Scanning via nmap and more.
+
+#### 3. IDS and IPS with Snort
+
+<code>IDS and IPS</code> <code>Snort</code> <code>Rule Making</code> <code>Traffic Analysis</code> <code>IP Headers</code> 
+
+In this networking security project. I use **Snort** to create IDS and IPS rules - testing these rules actively to see how they work within Snorts reporting as well as making adjustments where necessaru to complete these rules. This project also implements the use of **Scapy** to create manipulated packets to be able to test these IDS/IPS rules. Furthermore - this project looks at some of the Community rules created, analysing these rules and the use case of these in a real-world scenario.
+
+#### 8. Investigation into Emerging Techniques in Cybersecurity
+
+<code>Research Project</code> <code>Cybersecurity News</code> <code>Emerging Threats</code> <code>Patching and Vulnerability Assesment</code>
+
+This documentation is a research blog into the latest emerging techniques that hackers and the like are using to bypass IT Security - using resources such as LinkedIn's Cyber News, NCSC News as well as other reputable sources. The aim of this blog is to highlight the emerging and fast paced environment of Cybersecurity, being able to identify new vulnerabilities and identifying new risks as soon as possible.
 
 ### Tools 🖥️🥼
 
