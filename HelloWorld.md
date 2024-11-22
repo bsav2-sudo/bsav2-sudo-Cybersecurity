@@ -1,4 +1,4 @@
-# Ben Savage Cybersecurity Portfolio
+# Ben Savage / Cybersecurity Portfolio
 
 ### [WhoIs - Ben Savage] 🔍
 
@@ -7,6 +7,8 @@
 [Linkedin](https://www.linkedin.com/in/ben-savage-b194a3252?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Blqojxf8OQGmflO84%2BSOlQA%3D%3D) 
 [TryHackMe](https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3580125) 
 [Microsoft Learn](https://learn.microsoft.com/en-us/users/bensavage-6071/transcript/d84jxixjxkl50ke)
+
+![image](https://github.com/user-attachments/assets/2cbc6a82-3243-4fa0-8c32-620b8548f82f)
 
 ### Professional Statements
 
@@ -46,7 +48,7 @@ Listed below are some of the highlighted projects/labs I have completed as part 
 
 <code>Wireshark</code> <code>IPv4 and IPv6</code> <code>TCP and UDP</code> <code>Network Forensics</code> <code>Traffic Analysis</code>
 
-In this project, I use **Wireshark** to analyse existing PCAP files to look at normal and malicous traffic behaviour to differentiate and find IOC's through these PCAP's. These include looking at the <code>TCP and UDP Protocols </code> , <code> HTTP Requests and Posts </code> , <code> IPv4 and ARP Traffic </code> and more. This project looks at a range of PCAP files such as DOS attacks, Malware Analysis, Scanning via nmap and more.
+In this project, I use **Wireshark** to analyse existing PCAP files to look at normal and malicous traffic behaviour to differentiate and find IOC's through these PCAP's. These include looking at the <code>TCP and UDP Protocols </code> , <code> HTTP Requests and Posts </code> , <code> IPv4 and ARP Traffic </code> and more. This project looks at a range of PCAP files such as DOS attacks, Malware Analysis, Scanning via nmap and more. The projects focus is to be able to differentiate normal traffic with malicious traffic in Large PCAP files as large organisations will have a large amount of network traffic - so the ability to effectively pick out malicious traffic details is imperative to a successful IT Security Operation.
 
 #### 3. IDS and IPS with Snort
 
@@ -97,3 +99,4 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
