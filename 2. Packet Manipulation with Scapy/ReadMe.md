@@ -8,7 +8,7 @@
 
 ## Overview
 
-This project looks at Scapy, a Python library used for packet manipulation and testing networks with specially crafted packets. In this project, I am going to be exploring Scapy including how to craft packets with TCP, IP and Ether as well as sending packets over the network (with looking at these packets in Wireshark for proof of concept). Scapy can also be used for Packet Sniffing on a network to be bale to look at packets sent over the network, but for this project I will be mainly focusing on the packet crafting section of Scapy. So lets get started.
+This project looks at Scapy, a Python library used for packet manipulation and testing networks with specially crafted packets. In this project, I am going to be exploring Scapy including how to craft packets with TCP, IP and Ether as well as sending packets over the network (with looking at these packets in Wireshark for proof of concept). Scapy can also be used for Packet Sniffing on a network to be bale to look at packets sent over the network, but for this project I will be mainly focusing on the packet crafting section of Scapy. Scapy is also a very good tool for testing Firewalls and Rules as the modularity in being able to craft packets for specific circumstances makes it very useful for testing and being able to make adjustments to Firewalls and Rules. So lets get started.
 
 ## Scapy
 
@@ -89,39 +89,91 @@ Before crafting this complex packet however it will be worth having a look at so
 
 ARP Ping
 
+![Arp Ping - Extra](https://github.com/user-attachments/assets/0d0b2c2c-372c-4d3a-8a1d-56df23cf9639)
 
 ARP Cache Poisining 
 
+![ARP Cache Poisining](https://github.com/user-attachments/assets/f3531593-7a02-4504-8516-7f8a015f9de9)
 
 #### ICMP 
 
 ICMP Ping
 
+![ICMP Ping](https://github.com/user-attachments/assets/7a58f019-b040-4682-8eee-d873d0954df7)
 
 #### IP
 
 IPv3
 
+![IPv3](https://github.com/user-attachments/assets/a4f1c5da-6b72-4926-9e02-e5dd40f4a84e)
 
 Nestea Attack
 
+![Nestea Attack](https://github.com/user-attachments/assets/22b2ce96-4ccd-4ebd-9523-7639f7f460fc)
 
 Ping of Death
 
-
+![Ping of Death](https://github.com/user-attachments/assets/b43d989a-b675-437f-8ad6-a4b3647fe50f)
 
 #### TCP 
 
 TCP Ping
 
+![TCP Ping](https://github.com/user-attachments/assets/ddd0a56b-daf7-4ec9-bbe6-ba67e1f6955f)
 
 TCP Extremely Malformed
 
-
+![Extremely Malformed](https://github.com/user-attachments/assets/3133bbbf-6249-4a55-9257-dce397e38ccd)
 
 #### UDP
 
 UDP Ping
 
+![UDP Ping](https://github.com/user-attachments/assets/aa7fffff-782c-461c-9aab-a82a4652a4ad)
 
+### Crafting a more complex/realistic packet
 
+Now that I have had a look at some of the most common packets to make using Scapy, I think it is time to make a more realistic packet to send over the network - in a scenario when running tests to see if Firewall and Rules are set up properly and suitably - being able to make the packets as accurate as possible is efficient in making sure Security Mechanisms are properly set up otherwise when a modelled attack becomes reality - the results may vary in what happens. For this I am going to recreate a TCP Connect Packet to emulate a TCP Connect Session. Let's get started:
+
+First I'm going to need to make a Ether, IP and TCP Headers for my packet which I will do by doing the following in Scapy:
+
+![Start Packet](https://github.com/user-attachments/assets/383cb24d-934e-4703-b1a9-205cad9856e0)
+
+Now that I have made the packet for the TCP Connect - it is time to add some parameters to these fields, for a TCP Connect they look like the following:
+
+Ether:
+
+- Destination MAC
+- Source MAC
+- Ether Type (IPv4)
+
+IP:
+
+- Header Length: 20 bytes
+- Length: 44 Bytes
+- ID: 2232
+- Flags = 0x4
+- TTL = 255
+- Checksum = 9997
+- Source IP
+- Destination IP
+
+TCP:
+- Source Port
+- Destination Port
+- Sequnece Number
+- Data Offset = 24
+- Flags = 0x02
+- Window = 8760
+- Checksum = 0xa92c
+- Options - Max Segment Size = 1460 Bytes
+
+So now let me get this into Scapy by uisng the commands from the earlier packet.
+
+![Packet Made](https://github.com/user-attachments/assets/10c83371-8a14-4cb1-bcea-baef1f6b9bd4)
+
+Awesome - now that the packet has been made the last thing to do is send it on the network using the command <code>send(TCP_Connect)</code>
+
+And that is it complete. One of my favourite resources to use with this is the SANS Scapy Cheat Sheet which gaves an easier visual way of seeing all of the values that can be assigned to Headers. A really useful tool for me to use during this project so I'll link it below:
+
+[scapy-cheat-sheet.pdf](https://github.com/user-attachments/files/17904486/scapy-cheat-sheet.pdf)
