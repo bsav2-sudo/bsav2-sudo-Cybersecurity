@@ -242,6 +242,15 @@ Files are in a .txt format to be able to be read only.
 
 ## Outcomes of Investigation
 
+From doing these Network Analysis investigations - there is a few deductions that I have made about Network Analysis in the field of Cybersecurity:
+
+- Being able to identify scans and attacks in a large Network Capture file is very useful and a good skill to have - using effective filters that pro-actively find indicators of a scan or attack make it easier from an Analyst perspective to take an investigation further and commit the necessary actions.
+- Once a scan or attack has taken place, enforcing rules such as effective IDS/IPS and Firewall rules is a pro-active way to prevent similar scans and attacks from happening. Making said rules well strcutured and up to date is a really good way to have an effective Network defence. For example having an IDS/IPS rule that alerts an Analyst of malformed packets being sent over the network.
+- Keeping up to date with the latest hacker techniques for Network scans and attacks also makes it good to stay ahead of the game - for example implementing a good DDos protection system that can be adapted for different types of DDos Attacks.
+- The ability to test a network using tools such as Scapy in a closed environment can help test the Network Security measures to find vulnerabilities that need to be addressed or re-modelled - for example sending malformed packets on the netowrk to see if any alerts or warnings are correctly triggered.
+- Using Endpoint Security such as Agents can help with files that are known to be malicious from being executed on an endpoint - as files often don't come from just one individual website and are distributed across many websites.
+
+
 
 
 
