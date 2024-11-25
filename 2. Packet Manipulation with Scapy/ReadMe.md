@@ -177,3 +177,11 @@ Awesome - now that the packet has been made the last thing to do is send it on t
 And that is it complete. One of my favourite resources to use with this is the SANS Scapy Cheat Sheet which gaves an easier visual way of seeing all of the values that can be assigned to Headers. A really useful tool for me to use during this project so I'll link it below:
 
 [scapy-cheat-sheet.pdf](https://github.com/user-attachments/files/17904486/scapy-cheat-sheet.pdf)
+
+Another useful site that I used during this project was the site linked below which provides decoded packets to be able to see what normal packets should look like for a TCP Connecton:
+
+[TCP Connections Decoded](https://erg.abdn.ac.uk/users/gorry/course/inet-pages/)
+
+## Conclusion
+
+In conclusion from this project - I have learnt what a valuable asset Scapy is for being able to conduct tests of IT Security systems as the flexibility of being able to change fields to testing purposes is very easy to do and can make a difference in being able to test the accuracy of Firewall and IDS/IPS Rules. Scapy paired with Wireshark makes for an easy experience in crafting packets and seeing what they look like on the network.
