@@ -146,3 +146,75 @@ And there we are that is the configuration of Snort completed - so now it is tim
 
 ### Using Snort
 
+#### Packet Sniffing (Verbose)
+
+Okay now is time to actually use Snort now that I have a configuration I can use. The first mode I'm going to be using is to use it in <code>Verbose</code< mode while aslo specifying my NIC to collect information from, for me this looks something like this:
+
+<code>sudo snort -v -i eth0</code>
+
+When running in this mode - Snort will collect all packets from the specified Ethernet Adapter (eth0) using npcap - this will run until terminated using Ctrl+C to end the session - when the recorded data will be showed at the end looking like this:
+
+![First Run - Snort  (VD)](https://github.com/user-attachments/assets/4a2abc15-2fa1-4e0f-ba79-f733021e6ce8)
+
+As you can see Snort will collect all the protocols on the network and give a short overview of this data.
+
+#### Logging Mode
+
+In this mode - Snort will capture and log network traffic while also performing content matching and will provide alerts depending on the rules I have appied to the configuration or placed as an argument. This is a handy mode as it will allow me to see the network traffic while also being able to analyse users behaviour - however it should be noted this mode is resource intensive and will produce lots of alerts. This is what the command for logging looks like:
+
+<code>Snort -dev -l ./log -h 192.168.1.0/24</code>
+
+#### Network Intrusion Detection Mode
+
+This is the main mode for Snort as it will analyse all the network traffic but won't record every single packet that goes through the wire - meaning that it is less resource intensive and will only send alerts provided in the configuration file. The command for running IDS in a simple mode looks like this:
+
+<code>Snort -c /etc/snort/snort.conf -N</code> where -N prevents Snort from creating Log Files
+
+There are also some other commands that can change the way alerts are formated which I have started to list below:
+
+<code>Snort -c /etc/snort/snort.conf -D</code> - Run as a Daemon in the background
+
+<code>Snort -c /etc/snort/snort.conf -v -A none</code> - Alert Mode with **NO** Output
+
+<code>Snort -c /etc/snort/snort.conf -v -A console</code> - Alert Mode with **Console** Output
+
+<code>Snort -c /etc/snort/snort.conf -v -A cmg</code> - Generates CMG Style Alerts
+
+<code>Snort -c /etc/snort/snort.conf -v -A fast</code> - Alert Mode with **Fast** File Output
+
+<code>Snort -c /etc/snort/snort.conf -v -A full</code> - Alert Mode with **Full** File Output
+
+<code>Snort -c /etc/snort/rules/local.rules -v -A console</code> - Alert Mode where **Configuration isn't used**
+
+It is always important to remember to test the configuration file and make sure rules are correctly formatted before running these commands.
+
+### Rule Making - Snort
+
+Now is to one of the most important parts of Snort - the rule making. By making rules I can tailor make rules that fit my specific circumstances and what I want to be activity I want to be alerted to while also specifying incoming or outgoing packets I want to be dropped entirely from the network. After completing the Snort module on TryHackMe, I was intoduced to a cheat sheet which lays out what needs to be specified in a rule which I have put below:
+
+![TryHackMe](https://github.com/user-attachments/assets/6b080a9c-9529-425c-bcc1-ccb81c992afd)
+
+As you can see this cheat sheet perfectly outlies what should/can be included in a rule for Snort - I often look back at this sheet to make sure any rules I have made are correct and can be used before also testing my configuration in Snort before utlisiing. Below I have screenshotted some of the Rules I have made that are most likely to appear on a rule set for an organisation.
+
+![Creating TCP-UDP Alerts](https://github.com/user-attachments/assets/71541a5e-03e0-4447-b6e2-46d4f17f2ded)
+
+>> TCP and UDP Alerts for when IP Address has sent/recieved packets from a known abusive IP
+
+![Drop ICMP and TCP Rules](https://github.com/user-attachments/assets/009e6c85-5399-40aa-b9ce-1b0b9546dea2)
+
+>> TCP and ICMP drop rules for incoming packets - CVE Numbers not actual and used as an example
+
+![Reject TCP Rule](https://github.com/user-attachments/assets/387d0e53-81fb-4c35-b56a-49276b991ac7)
+
+>> TCP rule to reject packets from a known abusive IP Address
+
+It is also me worth noting the different types of rules that can be used in Snort - thankfully CrowdStrike has an excellent guide that outlines the different types of rules:
+
+![Crowdstrike](https://github.com/user-attachments/assets/a104a961-2a82-4509-bce2-25681efeec89)
+
+>> Source: https://www.crowdstrike.com/en-us/cybersecurity-101/threat-intelligence/snort-rules/
+
+
+## Conclusion
+
+In conclusion - from using Snort and being able to test Snort on a closed network - I have learnt that Snort is an invaluable tool when it comes to IDS/IPS as it is a versatile application that allows rule making for all use cases. The ability to run a full network sniff or to run Snort in the background makes it valuable to an IT Security Operation as they can use Snort depending on their needs. Furthermore - the community written rules create a great basis to be able to start writing rules and also changing rules for specific purposes or events.
