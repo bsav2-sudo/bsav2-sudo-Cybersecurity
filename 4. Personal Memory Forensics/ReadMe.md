@@ -121,7 +121,7 @@ Lets have a look at some of the artifacts that are available from the Windows Re
 - ShimCache - <code>SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache</code> - Keeps a track of App Compatability on the computer
 - Network List - <code>SOFTWARE</code> - contains information on Network names, connection dates and more
 
-There is a lot of artifacts that can be recovered from the Registry Hive - I've went through the effort to do a practical of as many of them as possible - this is linked within this folder as **Windows Forensics - Practical**. This ZIP file contains screenshots of me accessing the registry hives and getting informaion from the artifacts. Have a look to see!
+There is a lot of artifacts that can be recovered from the Registry Hive - I've went through the effort to do a practical of as many of them as possible - this is available upon request. This ZIP file contains screenshots of me accessing the registry hives and getting informaion from the artifacts. Get in touch to have a look and see!
 
 **Note**
 
