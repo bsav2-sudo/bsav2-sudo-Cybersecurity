@@ -91,4 +91,41 @@ There are a lot more commands that can be run to collect evidence but this shows
 
 All of these outputs can be used for analysis to see for example what ports are open and communicating on the network, any suspicious executables that are running that can't be seen, any suspicious services that are running and more.
 
-This project is very much a work in progress for myself so I will be back when I have more to add to this project!
+### Registry Explorer - Eric Zimmerman
+
+One of my other favourite tools to use for Windows Forensics is Eric Zimmerman's Registry Explorer. Windows Registry is collection of databases that contain configurations for a system. The data within these configurations can be anything such as the hardware information for the system, software, users information on the system and more. From a forensics standpoint - being able to access this sort of data when conducting an investigation is really useful as it can give more clues or evidence as to the events leading up to a compromised system. 
+
+There are 5 main root keys that are in any Windows System:
+
+- HKEY_CURRENT_USER - User who is currently logged in
+- HKEY_USERS - All Loaded User Profiles on the Machine
+- HKEY_LOCAL_MACHINE - Config information specific to the computer
+- HKEY_CLASSES_ROOT - Registry Hive that contains file extensions
+- HKEY_CURRENT_CONFIG - Information about hardware profile that is used on computer startup
+
+Within these root keys there are pieces of information which can be very useful to me in an investigation into a system, I'm going to explore some of them thatc contain really useful information.
+
+Ziya DENIZ on Medium uses a really nice chart that shows the different artifacts that are available from Registry Hives which contain files that are really good for getting more info:
+
+![Medium - Artifacts](https://github.com/user-attachments/assets/c3c17740-47c3-4d61-ab73-a7362f141a67)
+
+Source: https://medium.com/@dziyaaa/registry-forensic-analysis-317192c9cf59
+
+#### Artifacts within Registry Hives
+
+Lets have a look at some of the artifacts that are available from the Windows Registry Hives
+
+- NTUSER.DAT - <code>HKEY_CURRENT_USER</code> - Contains User Information
+- AmCache - <code>C:\Windows\AppCompat\Programs\Amcache.hve</code> - Information on programs recently run on the computer
+- Background Activity Monitor - <code>SYSTEM\CurrentControlSet\Services\bam\UserSettings\{SID}</code> - Information on programs running in the background of the system
+- ShimCache - <code>SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache</code> - Keeps a track of App Compatability on the computer
+- Network List - <code>SOFTWARE</code> - contains information on Network names, connection dates and more
+
+There is a lot of artifacts that can be recovered from the Registry Hive - I've went through the effort to do a practical of as many of them as possible - this is linked within this folder as **Windows Forensics - Practical**. This ZIP file contains screenshots of me accessing the registry hives and getting informaion from the artifacts. Have a look to see!
+
+**Note**
+
+This is an ongoing project - I'm still exploring the MacOS and Linux Forensics so keep an eye on this page for more!
+
+
+
