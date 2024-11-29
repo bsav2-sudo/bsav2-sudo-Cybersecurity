@@ -148,7 +148,13 @@ There is a lot of artifacts that can be recovered from the Registry Hive - I've 
 
 This is an ongoing project - I'm still exploring the MacOS and Linux Forensics so keep an eye on this page for more!
 
+## Conclusion
 
+In conclusion - from this project there is many lessons I have learnt, the biggest one being the ability to perform memory forensics on a compromised computer is a very useful skill in Cybersecurity as it can help a lot in investigations and also being able to mitigate risks in future attacks - including factors such as how the attack vector was able to access the machine, if any measures can be put in place to stop this type attack from happening again.
+
+Another lesson I have learnt during this project is the fact that being able to gather artifacts from both live and frozen systems is a game changer in an investigation - the more artifacts that are able to be recovered - the more evidence there may be to collect from said artifacts.
+
+And finally - the one lesson I have also learned during this project is being able to use tools such as Eric Zimmerman's tools save a lot of time in collecting artifacts as they will automatically generate a file at the end to be able to analyse.
 
 
 
