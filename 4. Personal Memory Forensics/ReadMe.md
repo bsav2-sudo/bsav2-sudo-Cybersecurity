@@ -4,7 +4,7 @@
 
 ### Skills Utilised
 
-<code>Memory Foresnics</code> <code>Redline</code> <code>FTK Imager</code> <code>Eric Zimmerman Tools</code> <code>Windows Forensics</code> <code>Registry</code> <code>Volatility</code> <code>RAM Dumps</code> 
+<code>Memory Foresnics</code> <code>Redline</code> <code>FTK Imager</code> <code>Eric Zimmerman Tools</code> <code>Windows Forensics</code> <code>Registry</code> <code>Volatility</code> <code>RAM Dumps</code> <code>Storage Forensics</code> <code>CLI</code> <code>Information Gathering</code>
 
 ## Overview
 
@@ -121,11 +121,36 @@ Lets have a look at some of the artifacts that are available from the Windows Re
 - ShimCache - <code>SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache</code> - Keeps a track of App Compatability on the computer
 - Network List - <code>SOFTWARE</code> - contains information on Network names, connection dates and more
 
-There is a lot of artifacts that can be recovered from the Registry Hive - I've went through the effort to do a practical of as many of them as possible - this is available upon request. This ZIP file contains screenshots of me accessing the registry hives and getting informaion from the artifacts. Get in touch to have a look and see!
+There is a lot of artifacts that can be recovered from the Registry Hive - I've went through the effort to do a practical of as many of them as possible - this is available upon request. This ZIP file contains screenshots of me accessing the registry hives and getting informaion from the artifacts. Get in touch to have a look and see! I've included some of the screenshots below as an example of some of the artifacts:
+
+![Command Line - Live System](https://github.com/user-attachments/assets/7ec653d6-2ed6-4d09-a07b-32ff3a57668c)
+
+> Shell Bags on a Live System being exported - SBECmd Tool
+
+![Typed URL's - IE](https://github.com/user-attachments/assets/79eef934-d229-4a46-b7a1-146f60cdfe75)
+
+> Internet Explorer Behaviour - Registry Viewer
+
+![USB Storage Device](https://github.com/user-attachments/assets/53304f69-f33c-4f49-87c9-cd87ac04a06c)
+
+> USB Storage Forensics - Registry Viewer
+
+![User Activities Database](https://github.com/user-attachments/assets/52a2e26c-70fe-4b77-8d25-871053636fef)
+
+> User Activities Database - AppData/Local
+
+![Apps and Services on Startup](https://github.com/user-attachments/assets/442845e9-6e68-4c4c-90ca-d2a00e268e25)
+
+> Apps and Services on Computer Startups - Registry Viewer
+
 
 **Note**
 
 This is an ongoing project - I'm still exploring the MacOS and Linux Forensics so keep an eye on this page for more!
+
+
+
+
 
 
 
