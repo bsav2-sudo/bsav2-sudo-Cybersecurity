@@ -13,12 +13,10 @@ This project looks at **3** more PCAP files that I have sourced from the interne
 ## PCAP Analysis 
 
 ## ARP-STORM
-
 Context: This file contains traffic information from what is a suspected ARP Storm
 File Size: 46.1 KB
 File Name: arp-storm.pcap
 File Type: .pcap
 Time: 2004-10-05 / 15.01.05
-
 
 #### Start of Analysis
