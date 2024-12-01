@@ -4,7 +4,7 @@
 
 ### Skills Utilised
 
-<code>Wireshark</code> <code>IPv4</code> <code>TCP</code> <code>UDP</code> <code>Traffic Analysis</code> <code>Traffic Filtering</code> <code>Problem Solving</code> <code>Packet Headers</code> <code>HMTL</code> <code>Network Scanning Techniques</code> <code>CVE Exploits</code>  
+<code>Wireshark</code> <code>IPv4</code> <code>TCP</code> <code>UDP</code> <code>Traffic Analysis</code> <code>Traffic Filtering</code> <code>Problem Solving</code> <code>Packet Headers</code>  <code>Network Scanning Techniques</code> <code>ARP Storm</code> <code>802.11 Protocol</code> <code>Fragmentation</code>
 
 ## Overview
 
