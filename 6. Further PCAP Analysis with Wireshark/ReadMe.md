@@ -47,4 +47,6 @@ Looking at one of the individual packets - there is some interesting parameters 
 
 - Source of ARP Packets - the source for all of these ARP packets is coming from a Cisco Device with the MAC Address of 00;07;0d;af;f4;54 - that comes from the Layer 3 address of 69.76.216.1. A strange IP Address as it is not within the Private Address range - may be something worth looking at later.
 
-#### 
+![CISCO Device](https://github.com/user-attachments/assets/8eb23c04-8900-4d64-a9d7-66bf33be1bf5)
+
+####
