@@ -219,3 +219,4 @@ Although this project was based at looking at a simple fragmentation packet capt
 
 ## Conclusion
 
+In conclusion, this project as taught me a lot more about going into packet capture files and being able to pick out infromation from packets on any suspicious or malicious activities within the packets. For me it was very interesting looking at these attacks and different network traffic in Wireshark - especially the 802.11 analysis as I haven't worked much on WIFI analysis, but doing this project has added another tool to my toolset! I will continue to use the samples I find for pcaps and keep up with analysis of network captures to be able to analyse malicious behaviour.
