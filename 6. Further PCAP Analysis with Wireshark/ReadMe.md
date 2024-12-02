@@ -59,5 +59,102 @@ To stop an ARP Broadcast Storm from happening on the network - the following ste
 - If hardware is old then it might be worth considering newer hardware as they will be able to cope with higher amounts of traffic being sent to a port such as broadcast packets lowering the expectation of an ARP Broadcast Storm being able to cause Denial of Service (DoS).
 
 ## Monitor Mode - 802.11 Analysis
+<p>Context: This file contains traffic information from a wireless network.</p>
+<p></p>File Size: 1.97 MB</p>
+<p>File Name: Monitormode_packet_capture.pcap</p>
+<p>File Type: .pcap</p>
+<p>Time: 2020-07-16 04:28:16 </p>
 
+As part of my projects - one of the things I wanted to take a closer look at was the 802.11 protocol for wireless networks as predominantly I've been looking at Ethernet based attacks where as more people are starting to adopt wireless networks within homes and enterprise settings for devices such as IoT and Access Points for Wifi. For these reasons I think it is good to be able to look at how Wireless packets appear in Wireshark and being able to identify de-authentication and more. So lets get started.
 
+#### Starting Analysis
+
+To start at the pcap - I want to look at some of the information that are availbale in the packets - things such as transmission rate, channel frequency just general things to be able to find them in a packet. I can do this by opening a packet and looking at the <code>Radiotap Header</code> in the packet to find out the information. Here is what is available in this pcap:
+
+![Channel Freq](https://github.com/user-attachments/assets/cc6fe7ee-4a32-4cf0-a325-edf353ab527d)
+
+> Channel Frequency
+
+![Data Rate](https://github.com/user-attachments/assets/eff24296-c17d-427b-ba9f-d27d70b35ea4)
+
+> Data Rate
+
+![Signal Strength](https://github.com/user-attachments/assets/b0fede84-1618-4f01-9465-547f8e7cbb0f)
+
+> Signal Strength
+
+Another packet header than can provide me some useful information about the network is the <code>IEEE 802.11 Wireless Management</code>. This part of the packet header contains information such as the beacon interval time, SSID and more information. Looking below can show some of this information:
+
+![Beacon - Interval](https://github.com/user-attachments/assets/29a7c885-1fcf-4cbe-8e4e-8e3cb376ec56)
+
+> Beacon Interval Time - time between consecutive beacon transmissions
+
+![Beacon - Parameters](https://github.com/user-attachments/assets/3ca1b6dc-1dc0-4745-a281-2bd77b805513)
+
+> Parameters set for the Beacon
+
+![Beacon - SSID Info](https://github.com/user-attachments/assets/b928f58e-b9dd-4108-8d9f-4470b0fecdbb)
+
+> SSID Information
+
+Within a packet capture - this information can be useful to find which network a user may have connected to at a certain timeframe but also tell us detailed information about the Wifi network as it could be used in attacks such as a MiTM attack. One other header that is useful to see more information about the beacon is <code>IEEE 802.11 Beacon Frame</code> which can tell us the MAC Address of the source and destination of transmission and any WLAN flags that are included:
+
+![Beacon - Source Address](https://github.com/user-attachments/assets/957dcf61-61b5-4165-a008-09f12643af5f)
+
+> Beacon Source Address (MAC)
+
+All of this information can be useful in an investigation regarding a wireless attack as it can give information on the beacon of the WIFI network - but there is also some more frames which I can take a look at which gives some more information.
+
+#### Control, Data and Management Frames
+
+This section looks at frames such as control and data frames that are used in the 802.11 handshake as well as management frames so lets have a look. Within Wireshark I can apply filters to look for specific frames within the pcap to limit the search:
+
+![Control Frames](https://github.com/user-attachments/assets/dd03f028-1ad1-4998-809c-7ddbc23148dd)
+
+> Control Frames
+
+![Data Frames](https://github.com/user-attachments/assets/ee1dde20-3e98-425b-a45e-6319e4cf1c5d)
+
+> Data Frames
+
+![Management Frames](https://github.com/user-attachments/assets/eb76b4f1-11bd-4b07-aeb3-b5f64868ae5d)
+
+> Management Frames
+
+Within the 802.11 protocol we have the association process which looks a little something like this:
+
+![802 11 Association](https://github.com/user-attachments/assets/9f217286-8c90-4184-bdde-0ae4d9407954)
+
+> Source: Cisco Meraki Documentation: https://documentation.meraki.com/MR/Wi-Fi_Basics_and_Best_Practices/802.11_Association_Process_Explained
+
+Looking at these seperate frames I can see the parameters set within each part of the assoication process which I will open up now:
+
+![Assoication Request Frame](https://github.com/user-attachments/assets/e6c0e7fb-fa1b-44f2-be87-11f466df71a8)
+
+> Association Request Frame
+
+![Assoication Request Response](https://github.com/user-attachments/assets/4e8b7f3f-58e3-4db3-89e8-3d02fec0412f)
+
+> Association Request Response Frame
+
+![Authentication](https://github.com/user-attachments/assets/181086a5-abc4-48d4-8169-b631c8cbcee2)
+
+> Authentication
+
+One of the most important ones to see if the de-authentication frame as in deauth attacks - this frame can give some information away about why the deauthorisation happened which I'm going to show below:
+
+![De-Authentication](https://github.com/user-attachments/assets/a6a773a4-bedc-4ba6-bfdd-183042237f63)
+
+> De-Authentication
+
+Just to have a quick look, when a client wants to join a wireless network - the process looks something like this:
+
+![Client Authentication Process](https://github.com/user-attachments/assets/5276f751-f760-44e3-bf0f-4d4bbd4bb66c)
+
+> Client Authentication Process
+
+## Overall 
+
+This project gives a basic over look at the 802.11 protocol within Wireshark and how to look at certain frames as well as information about beacon points as part of a wireless network. There are more frames etc. that can be looked at within Wireshark - and as I love a nice cheat sheet I've found one online that provides Wireshark filters to be able to use. Overall I found this project quite interesting as it visibly shows the process of authentication between a device and beacon on a network which is more than what meets the eye. Wireshark filters are below:
+
+![Wireless Wireshark Filters](https://github.com/user-attachments/assets/cdadcefc-aa73-447a-a251-6a18943e1759)
