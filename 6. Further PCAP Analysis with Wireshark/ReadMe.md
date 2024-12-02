@@ -8,7 +8,7 @@
 
 ## Overview
 
-This project looks at **3** more PCAP files that I have sourced from the internet to further explore Network Traffic analysis on different attacks. This project looks at ARP Storms, IPv4 Fragmentation and also analysis of 802.11 protocol to see how it works within Wireshark. The PCAP files have been sourced from trusted websites who provide practice .pcap files to be able to practice and identify network traffic. I wanted to explore more of the practice PCAP files to be able to further my ability and being able to identify types of network attacks. I am particularly interested in the analysis of the 802.11 protocol - as for most of my learning - I have been looking at Ethernet protocols, but wireless networks are prone to attacks as well including de-authentication attacks and more. SO lets get started by looking at an ARP Storm attack.
+This project looks at **3** more PCAP files that I have sourced from the internet to further explore Network Traffic analysis on different attacks. This project looks at ARP Storms, IPv4 Fragmentation and also analysis of 802.11 protocol to see how it works within Wireshark. The PCAP files have been sourced from trusted websites who provide practice .pcap files to be able to practice and identify network traffic. I wanted to explore more of the practice PCAP files to be able to further my ability and being able to identify types of network attacks. I am particularly interested in the analysis of the 802.11 protocol - as for most of my learning - I have been looking at Ethernet protocols, but wireless networks are prone to attacks as well including de-authentication attacks and more. So lets get started by looking at an ARP Storm Broadcast.
 
 ## PCAP Analysis 
 
@@ -21,7 +21,7 @@ This project looks at **3** more PCAP files that I have sourced from the interne
 
 #### Start of Analysis
 
-This pcap file looks at what is believed to be an ARP Storm attack that has taken place on a network. The description of a ARP Storm attack is as follows:
+This pcap file looks at what is believed to be an ARP Storm Broadcast that has taken place on a network. Looking at an ARP Broadcast Storm is not necessarily a type of attack but from a network analysis standpoint it can help me identify what one looks like on a network and be able to deduct it as a storm taking place on a LAN. The description of a ARP Broadcast Storm is as follows:
 
 "ARP-based Distributed Denial of Service (DDoS) attacks due to ARP-storms can happen in local area net- works where many computer systems are infected by worms such as Code Red or by DDoS agents. In ARP. attack, the DDoS agents constantly send a barrage of ARP requests to the gateway, or to a victim computer." - Kumar and Gomez, 2010.
 
@@ -49,4 +49,15 @@ Looking at one of the individual packets - there is some interesting parameters 
 
 ![CISCO Device](https://github.com/user-attachments/assets/8eb23c04-8900-4d64-a9d7-66bf33be1bf5)
 
-####
+#### Mitigation against ARP Storm
+
+To stop an ARP Broadcast Storm from happening on the network - the following steps can be taken:
+
+- Identify the source of the Broadcast Storm by using a tool such as Wireshark or another network analysis tool - from there you can identify the source of the storm and change what needs to be changed.
+- Double check for duplicate IP Addresses on the network to make sure there is no conflicting IP Addresses - if there is then it would be a case of changing an IP Address on one of the devices to stop it conflicting
+- Implementing storm control (Cisco devices) and configure ARP Rate limiting - this will limit the rate that ARP packets that are sent over the network while implementing storm control will look at the broadcast, unicast and multicast packets being sent to a port - if it reaches over a certain threshold then the Strom Control will take action depending on the parameters set.
+- If hardware is old then it might be worth considering newer hardware as they will be able to cope with higher amounts of traffic being sent to a port such as broadcast packets lowering the expectation of an ARP Broadcast Storm being able to cause Denial of Service (DoS).
+
+## Monitor Mode - 802.11 Analysis
+
+
