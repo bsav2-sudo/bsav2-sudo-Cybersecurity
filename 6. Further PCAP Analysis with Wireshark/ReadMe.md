@@ -158,3 +158,64 @@ Just to have a quick look, when a client wants to join a wireless network - the 
 This project gives a basic over look at the 802.11 protocol within Wireshark and how to look at certain frames as well as information about beacon points as part of a wireless network. There are more frames etc. that can be looked at within Wireshark - and as I love a nice cheat sheet I've found one online that provides Wireshark filters to be able to use. Overall I found this project quite interesting as it visibly shows the process of authentication between a device and beacon on a network which is more than what meets the eye. Wireshark filters are below:
 
 ![Wireless Wireshark Filters](https://github.com/user-attachments/assets/cdadcefc-aa73-447a-a251-6a18943e1759)
+
+## IPv4 Fragmentation
+
+<p>Context: This file contains traffic information for an IPv4 fragmentation process - basic</p>
+<p></p>File Size: 2.91 KB</p>
+<p>File Name: ipv4frags.pcap</p>
+<p>File Type: .pcap</p>
+<p>Timeframe: 2017-10-02 13:03:32 </p>
+
+The final PCAP file I'm going to be looking at is a pcap containing IPv4 fragmentation. Fragmentation occurs when a packet is too large to send over the network so is fragmented into seperate packets and then re-assembled when all the packets have been recieved. Each packet has a flag and offset on them so that they can be re-assembled in the right place. IP Fragmentation can also be used by attackers to do the following:
+
+- Disrupt re-assembly - malformed packets added can disrupt the assembly of fragmented packets causing crashes or errors resulting in DoS.
+- Bypass firewalls and evade detection - attacks are sent in fragmented packets that won't be picked up by firewall rules and malware/exploits are obfuscated in fragmented packets avoiding signature detection.
+- Overload resources - when lots of fragmented packets are sent over the network they can overwhelm the network capacity and take down resources.
+
+This pcap looks at a simple fragmentation of two packets that are then re-assembled at the end - this gives an overall basis of how fragmentation should work normally - however for an attacker they may want to take advantage of some of the parameters that can be changed so lets have a look at the fragmentation process.
+
+#### Start of Analysis
+
+![1st Packet](https://github.com/user-attachments/assets/f1492578-06c2-4731-8851-348bd86fd3a3)
+
+> 1st Packet being sent on the network
+
+![1st Packet Data](https://github.com/user-attachments/assets/aae7bc38-90f1-4e44-8e32-700ea1d4ff13)
+
+> Data in 1st Packet
+
+![Fragment offset - Packet 2](https://github.com/user-attachments/assets/ee8dd759-4523-4057-b3b8-75215bdc26a2)
+
+> Fragment offset for Packet 2 
+
+![Fragments assembled](https://github.com/user-attachments/assets/f281367e-08c4-4570-8917-b7ad174e4d10)
+
+> Fragments being re-assembled in last packet
+
+The process in a pcap like this is simple enough but there are different parameters within IPv4 that can be manipulated for an attacker can cause bypas firewalls etc. talked about earlier. There are many different types of fragmentation attacks that can take place on a network which include the following:
+
+- Teardrop attack - set the fragmentation offset and size fields to overwrite previous packets - for older systems this can crash the system.
+- TTL Manipulation - sets the TTL of packets to interfere with TTL Tracking in the re-assembly process.
+- Nestea Attacks - sets invalid high fragment offsets combined with very small fragment sizes to crash Linux systems.
+- Fragrouter tool - Performs automated attacks by generating malicious traffic information and packet values on the network over time.
+
+As you can see there are may ways in which an attacker can manipulate the IPv4 data to be able to cause Denial of Service (DoS) or interfere with the fragmentation re-assembly process.
+
+#### Mitigate against IPv4 Fragmentation attacks
+
+To be able to mitigate against these type of attacks, the following can be added to mitigate this attack:
+
+- Disable IPv4 fragmentation if it is not absolutely required.
+- Use atatck mitigations built into Operating Systems such as Windows IPEV2, Linux RPFilter, and BSD IPFW.
+- Keep firewalls and IPS/IDS's up to date on the latest patches and updates.
+- For internal systems - allow fragmentation but only for particular MAC Addresses and specific sizes.
+- Use intrusion protection systems that can assemble fragmented packets and have stateful inspection - limit the assembled packet sizes.
+- Monitor and analyze packets for anomalies in fragmentation.
+
+#### Fragmentation conclusion
+
+Although this project was based at looking at a simple fragmentation packet capture - it has shown to me the process of fragmenting IPv4 packets and how from a red and blue side the parameters in the packets that can be manipulated during fragmentation to cause DoS attacks and interfere with the fragmentation re-assembly process.
+
+## Conclusion
+
