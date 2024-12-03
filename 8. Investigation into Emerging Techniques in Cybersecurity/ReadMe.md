@@ -12,4 +12,6 @@ News Story: UK underestimates threat of cyber-attacks from hostile states and ga
 
 ![Image](https://github.com/user-attachments/assets/ab9ae166-c953-4cad-b11e-5557326021a5)
 
-I''ve chose to look at this news piece uploaded on the 3rd of December as from the headline it looks like an interesting story on the landscape of cybersecurity in the UK and where the country is currently at in terms of defence. 
+I've chose to look at this news piece uploaded on the 3rd of December as from the headline it looks like an interesting story on the landscape of cybersecurity in the UK and where the country is currently at in terms of defence. The statements comes from the head of the GCHQ's National Cyber Security Centre - expressing his concerns at the state of cyber attacks the UK is getting from foreign states such as Russia and China. 
+
+In this 
