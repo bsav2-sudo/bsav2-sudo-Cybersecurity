@@ -31,14 +31,14 @@ While also completing my labs and research, I am currently in the process of rev
 
 |   Projects                                                 | Skills and Knowledge Gained |  
 |------------------------------------------------------------|-----------------------------|                   
-| 1. Network Analysis with Wireshark                         |                              
-| 2. Packet Manipulation with Scapy                          |  
-| 3. IDS and IPS with Snort                                  |
-| 4. Personal Memory Forensics                               |
-| 5. Vulnerability Assesment with Nessus                     |
-| 6. Further PCAP Analysis with Wireshark                    |
-| 7. SIEM with Splunk Enterprise                             |
-| 8. Investigation into Emerging Techniques in Cybersecurity |               
+| 1. Network Analysis with Wireshark                         |  <code> Wireshark </code> <code> TCP and UDP </code> <code> Network Analysis </code> <code> Problem Solving </code>                            
+| 2. Packet Manipulation with Scapy                          |  <code> Scapy </code> <code> Packet Manipulation </code> <code> IPv4 </code> <code> Network Testing </code>
+| 3. IDS and IPS with Snort                                  |  <code> Snort </code> <code> IPS and IDS </code> <code> Rule-Making </code> <code> Alerts </code>
+| 4. Personal Memory Forensics                               |  <code> Eric Zimmerman Tools </code> <code> Windows Forensics </code> <code> Investigation </code> <code> Beahviour </code>
+| 5. Vulnerability Assesment with Nessus                     |  <code> Nessus </code> <code> Assesment </code> <code> Vulnerability </code> <code> Response </code>
+| 6. Further PCAP Analysis with Wireshark                    |  <code> Wireshark </code> <code> Fragmentation </code> <code> ARP Storm </code> <code> 802.11 </code>
+| 7. SIEM with Splunk Enterprise                             |  <code> SIEM </code> <code> Splunk </code> <code> Analysis </code> <code> Data Query </code>
+| 8. Investigation into Emerging Techniques in Cybersecurity |  <code> Personal Development </code> <code> News </code> <code> Analysis </code> <code> Blogging </code>             
 
 ### Labs 
 
