@@ -1,4 +1,4 @@
-# 8. Investigation into Emerging Technqiues in Cybersecurity
+# 8. Investigation into Emerging Techniques in Cybersecurity
 
 ## Overview
 
