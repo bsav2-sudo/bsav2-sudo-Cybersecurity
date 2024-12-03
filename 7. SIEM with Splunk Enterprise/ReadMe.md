@@ -72,3 +72,14 @@ As part of an investigation this info would be very good to have to find out abo
 
 > Host Information
 
+One doucment I always keep is a table that has the Windows Event ID's - that way I can easily see what the Event ID is or what I should be looking for:
+
+[Windows Event ID.pdf](https://github.com/user-attachments/files/17992674/Windows.Event.ID.pdf)
+
+Another part of Search and Report that I also like to use is the Interesting fields on the left pane - it can give a quick look at certain data such as how many events were logged on a certain day, number of users reported and more:
+
+![Interesting Fields](https://github.com/user-attachments/assets/8522a431-2d47-45a3-a39e-3cdce7269382)
+
+#### Conclusion 03-12-24
+
+This is just a basic start at using Splunk as an SIEM, in the future I hope to add more to this in a blog style as I learn more about what Splunk can do - for now this shows how to setup Splunk, add a data source and how to search in Splunk.
