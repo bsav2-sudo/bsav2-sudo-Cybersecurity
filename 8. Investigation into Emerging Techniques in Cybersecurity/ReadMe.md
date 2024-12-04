@@ -26,3 +26,32 @@ Ben Savage
 16:04 GMT 03-12-2024
 
 -----------------------------------------------------------------------------------------------------------------------------
+
+#### 4th December 2024 - The Wall Street Journal 
+
+News Story: How Generative AI Is Reinventing Cyberattacks and Defenses (Q&A)
+
+[Wall Street Journal](https://partners.wsj.com/okta/identity-is-security/how-generative-ai-is-reinventing-cyberattacks-and-defenses/)
+
+![Generative-AI-Cybersecurity](https://github.com/user-attachments/assets/5fa74ed3-f31f-4d04-b0c3-927b82b459be)
+
+One of the most important discussions happening in Cybersecurity at the minute is the growing rate of generative AI. From my own personal experience I have seen the grwoth of generative AI from watching my friends at university use it to complete assignments on time to now people using it as part of their daily life at work and at home to save time. Of course, there is always advantages and disadvantages to how generative AI can be used in our daily lives - one of the biggest topics surrounding AI within the IT community at the minute is it being implemented in IT Security. This article is a Q&A from WSJ Buisness on the use of Generative AI within both an attacking and defensive use case in cyber attacks - how can it be used as part of a defence and how can it be used as an attacking mechanism. 
+
+One of the things that is spoken about within this article is the role generative AI has in the role of software developemnt - as a tool for software development the ability to generate code in a matter of seconds is amazing, makes the process more efficient and focus on different areas of the development. But within the article - it is discussed that security is being overlooked within the production of software as people try to get their products to market as quickly as possible. I can see this happening from a development scenario and can understand how security policies get overlooked - it highlights the importance of having frameworks in place to be able to not overlook possible security flaws. 
+
+In the article it is also highlighted the way in which attackers are now using AI to create new threats and new ways to gain access. From looking on the outside and completing labs inside of Kali Linux the availability of scripts online the people can easily download and then watch a YouTube video on how to run the script. It doens't require a lot to be able to launch an attack now - and now with the use of Generative AI, anyone with little to no coding experience at all can create scripts to try and attack a network or person. Just as a little test I launched ChatGPT online and asked it two simple commmands:
+
+- Write a python script to get information for **my** PC.
+- Write a python script to get information for **someone else's** PC.
+
+Only a slight difference in the wording but lets see what ChatGPT does:
+
+![GPT - Own PC](https://github.com/user-attachments/assets/83b535c0-70a8-430a-8661-eef2aa2f22d2)
+
+![GPT - Somone elses PC](https://github.com/user-attachments/assets/1e1ef816-4416-43a5-80aa-d967fbde856a)
+
+It is clear that just a slight change in wording makes a difference to a Generative AI such as ChatGPT, but what is to stop someone running the script from the first question on someone else's PC? It is just a thought that even though some AI models have policies in place to stop malicious scripts being written - there'll be ways around that attackers can use to still use generative AI for their benefit. 
+
+However what I find really interesting in this article is the discussion of how companies can use generative AI as a defense mechnaism from cyber attacks. I love the idea personally - and one of my favourite things discussed is teaching an AI model to spot deep fakes by being able to differentiate between real content and manipulated content. Overtime the more and more that AI model learns and gathers more data - the more it will be able to find malicious content. When I think about it from a defensive point of view - the use of Generative AI is a good concept and definelty one that in the article the writer suggests companies should be doing. But with this comes a warning which is "You just need to make sure you adopt the technology in the safest manner possible, which makes it more critical for businesses—both those using AI as a tool and those providing AI services—to rely on neutral and independent vendors that provide leading threat solutions versus monolithic platforms that think of security as an afterthought." 
+
+The discussion behind Generative AI is one that is going to be talked about for a long time - in the cyber world a defensive and attacking standpoint - it will be interesting to see how the conversation develops over time with the projection of generative AI and cyber attacks in the future.
