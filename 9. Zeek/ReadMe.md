@@ -1,6 +1,6 @@
 # 9. Zeek
 
-![logo (1)](https://github.com/user-attachments/assets/07da84e6-df63-4be4-912e-dac3d72c4a30)
+![image (1)](https://github.com/user-attachments/assets/641ec553-f9a4-4005-996d-bb906920666b)
 
 ### Skills Utilised
 
@@ -18,5 +18,19 @@ Zeek is an open source networkin security tool from The Zeek Project. Zeek helps
 
 ### Starting Zeek
 
-Now as my 
+Now as my lab laptop is a Windows platform, it isn't possibe for me to use the Linux Binaries availbale from Zeek's site - however this is one alternative application I can use to still be able to use Zeek - Zui. Zui was formally Brim Security uses the Zeek logs from a pcap file to be able to carry out analysis on network captures. So I'm going to get that installed and run it on my laptop:
+
+![Screenshot 2024-12-14 193305](https://github.com/user-attachments/assets/77ce21cc-d5b6-41d5-b3ec-1d8a96044a0d)
+
+Cool - now before I can have a look on Malware Traffic Analysis for a PCAP I want to investigate - I need to download the Brimcap library to be able to do queries within Zui. This comes in the form of a JSON Library and is available from Brim's Git page - so let me get that downloaded and then imported into the Zui interface:
+
+![Queries Import](https://github.com/user-attachments/assets/ad818d1e-622b-4cc6-9f65-c80f90be109f)
+
+As you can see - this imports already created queries from Brim such as Top Domains, HTTP Requests and more. Makes it much more easier to look through the PCAP file and find the information more easily. Cool now that I'm setup with Zeek in the Zui interface I'm going to pick my PCAP that I want to investigate within this. The one I will be choosing is the following:
+
+![PCAP Online](https://github.com/user-attachments/assets/005735b2-fc36-4493-ae42-a6072ae907ff)
+
+Looks like an interesting investigation so let me get it downloaded and then we can start looking at it.
+
+### 2020-05-28 - CatBomber
 
