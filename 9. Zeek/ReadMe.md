@@ -34,3 +34,89 @@ Looks like an interesting investigation so let me get it downloaded and then we 
 
 ### 2020-05-28 - CatBomber
 
+Now for this analysis I would normally want to use the Zui interface - but after following Zeek's official YouTube channel - I decided to use [Try Zeek](https://try.zeek.org/#/?example=hello) instead - it is a simple website that lets me use Zeek online - all I have to do is upload to pcap file and let it analyze the file. And then after doing that here is the results:
+
+![Adding PCAP File](https://github.com/user-attachments/assets/23c29a2f-2ec7-4542-8282-ea1fa70c48ed)
+
+![Results ](https://github.com/user-attachments/assets/5310f131-1feb-445b-98e5-c5ffa1d3d457)
+
+As you can see - I get all of the Zeek logs it can find in the PCAP, there is a really useful cheat sheet that I was able to find on all the Zeek logs and what all the parameters means which I have linked here [Cheat Sheets](https://github.com/corelight/zeek-cheatsheets). These logs include HTTP Requests, Files, Made Connections and more logs. This makes it way simpler than looking through a whole PCAP file just to find a certain detail - I can just look at the Logs and see what has been gathered to get further into my investogation.
+
+Okay so now I have a basic view of Zeek, let me see what I need to find out from the pcap file:
+
+![Malware Net Overview](https://github.com/user-attachments/assets/400cdbbd-300b-4ba7-9e0c-7deb4f955e7d)
+
+Okay so this is the info I need to find:
+
+- IP, Host Name and User Account of Infected Client
+- Other User Account and Host Name is HTTP POST Traffic
+- Infected Users Email Password
+- SHA256 Hashes for the two Windows PE's
+
+### First Task
+
+So the first task wants me to get the IP, Host Name and User Account of the infected client, lets get started. Looking at the HTTP Logs from Zeek - I can see that I get the URI information from the PCAP which includes some Host Names and User Names - lets have a look:
+
+![User Accounts](https://github.com/user-attachments/assets/59568d5a-d6c5-4f0e-9262-7087ef22c1c5)
+
+There looks to be two of them - and from the info I've been given I already know the bottom one is the Domain Controller which only leaves the top one as out infected client:
+
+![Infected PC](https://github.com/user-attachments/assets/102ffedb-cac7-4903-baee-bd53bd0cc73e)
+
+I'm pretty satisfied this is our infected client so I'll make a note on the details
+
+IP Address: <code>10.5.28.229</code>
+User Account: Yas33
+Host Name: CAT-BOMB-W7-PC
+
+Cool lets move onto the second task.
+
+### Second Task
+
+One of the cool things I can do within TryZeek is export any of the logs into Wireshark to be able to look at the packets more in detail - so that's what I will do with the HTTP logs from Zeek. Looking into the information that is sent on HTTP I can see another user:
+
+![User Accounts - Wireshark](https://github.com/user-attachments/assets/2140dd25-9d32-468e-8725-df783d80ae99)
+
+Amazing - I can see the User Accounts which has made me actually wonder about my first answer - I think that could be philip.gent so I'll change that and also add the other two answers I've found from this:
+
+Infected Client
+
+IP: <code>10.5.28.229</code>
+User Account: phillip.ghent
+Host Name: CAT-BOMB-W7-PC
+
+Other Client
+
+User Account: timothy.sizemore
+Host Name: CAT-BOMB-W10-PC
+
+### Third Task
+
+The third task wants me to find the infected users email password so this must have been in the pcap somewhere - my first guess is going to be somewhere in the HTTP Traffic as from the second task there is a lot of text/plain traffic which I can have a look at.
+
+Within Wireshark - I can follow the HTTP Traffic using the Follow > HTTP Stream and see what information it is - and looking at HTTP with the Stream ID of 9, there is a piece of information from POP3 that contains our infected users name and a password next to it:
+
+![Outlook Password](https://github.com/user-attachments/assets/37a7e5e7-54e6-40d8-90f4-d5dc27a05ee5)
+
+Password: gh3ntf@st
+
+Grand, three down one to go!
+
+### Fourth Task
+
+For the final task - I need to find the two Windows Portable Executables in this pcap and get the SHA256 Hashes from them. So the first thing I'm going to do is head back to TryZeek and look at the PE Logs:
+
+![PE Logs](https://github.com/user-attachments/assets/37af21c5-e007-4698-a75c-a94994992ad1)
+
+Great I've found both of them and I know that they are two .png files from looking at them individually - lets get it exported as an HTTP Object - to do this I'm going to go back to Wireshark and choose the Export > HTTP Object option. From there I can filter by content type to find the two .png files:
+
+![Export HTTP Objects](https://github.com/user-attachments/assets/ec74ca13-eb6d-4835-aeeb-3cd219347c0b)
+
+And once I've done that they'll be exported into the destination I chose and I can run them through PowerShell to get the SHA256 Hashes for each one which is as follows:
+
+4e76d73f3b303e481036ada80c2eeba8db2f306cbc9323748560843c80b2fed1 - cursor.png
+934c84524389ecfb3b1dfcb28f9697a2b52ea0ebcaa510469f02d9086bcc79a - imgpaper.png
+
+Great - thats all the tasks complete and looking at the answers included on the website - I got them all correct! This just proves the ease of using Zeek to complete these tasks - if I were to use the pcap just purely in Wireshark it would take me longer to find what I was looking for!
+
+
