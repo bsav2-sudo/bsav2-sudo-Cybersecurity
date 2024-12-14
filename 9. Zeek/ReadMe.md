@@ -65,9 +65,9 @@ There looks to be two of them - and from the info I've been given I already know
 
 I'm pretty satisfied this is our infected client so I'll make a note on the details
 
-IP Address: <code>10.5.28.229</code>
-User Account: Yas33
-Host Name: CAT-BOMB-W7-PC
+<p>IP Address: <code>10.5.28.229</code></p>
+<p>User Account: Yas33</p>
+<p>Host Name: CAT-BOMB-W7-PC</p>
 
 Cool lets move onto the second task.
 
@@ -81,14 +81,14 @@ Amazing - I can see the User Accounts which has made me actually wonder about my
 
 Infected Client
 
-IP: <code>10.5.28.229</code>
-User Account: phillip.ghent
-Host Name: CAT-BOMB-W7-PC
+<p>IP: <code>10.5.28.229</code></p>
+<p>User Account: phillip.ghent</p>
+<p>Host Name: CAT-BOMB-W7-PC</p>
 
 Other Client
 
-User Account: timothy.sizemore
-Host Name: CAT-BOMB-W10-PC
+<p>User Account: timothy.sizemore</p>
+<p>Host Name: CAT-BOMB-W10-PC</p>
 
 ### Third Task
 
@@ -114,8 +114,8 @@ Great I've found both of them and I know that they are two .png files from looki
 
 And once I've done that they'll be exported into the destination I chose and I can run them through PowerShell to get the SHA256 Hashes for each one which is as follows:
 
-4e76d73f3b303e481036ada80c2eeba8db2f306cbc9323748560843c80b2fed1 - cursor.png
-934c84524389ecfb3b1dfcb28f9697a2b52ea0ebcaa510469f02d9086bcc79a - imgpaper.png
+<p>4e76d73f3b303e481036ada80c2eeba8db2f306cbc9323748560843c80b2fed1 - cursor.png</p>
+<p>934c84524389ecfb3b1dfcb28f9697a2b52ea0ebcaa510469f02d9086bcc79a - imgpaper.png</p>
 
 Great - thats all the tasks complete and looking at the answers included on the website - I got them all correct! This just proves the ease of using Zeek to complete these tasks - if I were to use the pcap just purely in Wireshark it would take me longer to find what I was looking for!
 
