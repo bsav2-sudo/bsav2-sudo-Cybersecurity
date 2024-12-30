@@ -281,7 +281,7 @@ As you can also see below there are also references to CVE's where needed:
 
 ![CVE References](https://github.com/user-attachments/assets/8f61571c-d05e-4f04-a1a5-03190886a12d)
 
-Let's say I want to implement a new rule in my Local Rules - I want to put in a rule for ICMP DoS attacks when they happen - within these community rules I'v found one - so all I'm going to do is copy and paste the rule into my Local Rules and then save the file. 
+Let's say I want to implement a new rule in my Local Rules - I want to put in a rule for ICMP DoS attacks when they happen - within these community rules I've found one - so all I'm going to do is copy and paste the rule into my Local Rules and then save the file. 
 
 ![Local Rules Update - ICMP DoS Update](https://github.com/user-attachments/assets/ddd0a8d4-e8a0-455a-bc1e-24f138fa78ed)
 
