@@ -218,3 +218,53 @@ It is also me worth noting the different types of rules that can be used in Snor
 ## Conclusion
 
 In conclusion - from using Snort and being able to test Snort on a closed network - I have learnt that Snort is an invaluable tool when it comes to IDS/IPS as it is a versatile application that allows rule making for all use cases. The ability to run a full network sniff or to run Snort in the background makes it valuable to an IT Security Operation as they can use Snort depending on their needs. Furthermore - the community written rules create a great basis to be able to start writing rules and also changing rules for specific purposes or events.
+
+# Update - 30th December 2024
+
+## Overview
+
+In this update on using Snort as an IDS/IPS, I aim to try making some new rules and testing them to make sure they work correctly and are set correctly - as I have messed with rules before this should be a straight forward task however I want to test my abilities to make sure I can make some effective IDS rules to be able to be detected. So lets get started before going into 2025!
+
+### Making the rules
+
+So the first rule I want to make is an ICMP Rule - so if anyone tries to ping the home subnet then it can be detected and I can be notified - the first thing I'm going to do is open my <code>local.rules</code> file and open it in my editor of choice - Sublime Text. Once open I can type in the rule I want to apply which is shown below:
+
+![Local Rules Update - ICMP](https://github.com/user-attachments/assets/3ccd7c2d-fcd8-4a90-95aa-9e2e644e5722)
+
+What this rule basically says is: "IF any ICMP Packets get sent from anywhere to my home network on any port - tell me about it and give it this ID - revision number 1". That is the simplest way to look at it so lets get it loaded up in Snort and run it. In Snort there is a certain command that needs to be run in order to run Snort in Alert Mode which is the following:
+
+![Running in Alert Mode](https://github.com/user-attachments/assets/1bd6dad9-c304-4f7b-ab7d-6b57f108c136)
+
+Here is what each of the arguments means:
+
+Q - Run in quiet mode
+l - Where is the log going to be saved
+i - What network adapter do you want to use
+A console - Alert mode with alerts recorded in console
+c - Configuration file to use
+
+So without further ado I'm going to grab a laptop and start sending ICMP Ping packets to the machine running Snort. Ah, on my first attempt Snort wasn't picking any of them up - I feel like I might have made a mistake in the snort.conf file about the Local Rules.
+
+Looking in the config file sure enough there it is - my rule path wasn't set for the local.rules ☹️ 
+
+![File Path Not Set](https://github.com/user-attachments/assets/769fbe3d-0d1b-4655-a346-59722c31d87c)
+
+Such an easy mistake to make so let me fix it - and while I'm here I'll fix any other file paths that need fixed. Cool lets try that again...
+
+![ICMP Detected](https://github.com/user-attachments/assets/a9e90e60-628d-4f12-9ca9-df846b52e39d)
+
+As you can see the ICMP Packets were detected by Snort and all the alerts came through on the console! Let's try another one - lets make one for an SSH attempt:
+
+![Local Rules Update - SSH](https://github.com/user-attachments/assets/d5276f23-32f8-4e78-9e22-fb500cdf339b)
+
+This rule basically says: "If there is any TCP Packets sent from anybody on any port to my home network on Port 22 - let me know with the message SSH Authentication Attempt with this ID and 1st Revision."
+
+Let me grab my trusty laptop again and try and SSH onto the machine running Snort, and sure enough:
+
+![SSH Detected](https://github.com/user-attachments/assets/ff0c810e-1c7b-4a18-9f3e-e3a6906345a8)
+
+Snort detected it! I love how easy it is to make the Snort rules and implement them straight away - one tool when doing this I found was Snorpy which a lot of people reccomend - I'd love to try this someday to see if it can improve workflow efficiency when working with rules. I've included a screenshot of the web client:
+
+![snorpy](https://github.com/user-attachments/assets/33318a11-a160-4f8d-ba19-06d81ba04053)
+
+That is it for now but in future - I'll be back to try and make some more rules and more effective rules. Goodbye 2024, Hello 2025!
