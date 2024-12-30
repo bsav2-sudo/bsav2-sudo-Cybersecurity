@@ -267,4 +267,22 @@ Snort detected it! I love how easy it is to make the Snort rules and implement t
 
 ![snorpy](https://github.com/user-attachments/assets/33318a11-a160-4f8d-ba19-06d81ba04053)
 
-That is it for now but in future - I'll be back to try and make some more rules and more effective rules. Goodbye 2024, Hello 2025!
+One of things I love about Snort is the Community Rules that the Snort community make and upload to the main site - this can be used by anyone for their own IDS/IPS and include 1000's of already written rules. They often include very handy info as well such as a CVE reference if any. The rules are udpated regularly and can be downloaded from here.
+
+[Community Rules Download Link](https://www.snort.org/downloads#rules)
+
+![Community Rules](https://github.com/user-attachments/assets/e3a1a559-6e7b-4f2e-af89-d13774a3e549)
+
+When opening the rules file in Sublime Text we get a huge library of pre-made rules that still follow the same rule making structure:
+
+![Community Rules - Open](https://github.com/user-attachments/assets/6e8ec32c-25e1-41c8-b2c8-1e5c3ecb41ef)
+
+As you can also see below there are also references to CVE's where needed:
+
+![CVE References](https://github.com/user-attachments/assets/8f61571c-d05e-4f04-a1a5-03190886a12d)
+
+Let's say I want to implement a new rule in my Local Rules - I want to put in a rule for ICMP DoS attacks when they happen - within these community rules I'v found one - so all I'm going to do is copy and paste the rule into my Local Rules and then save the file. 
+
+![Local Rules Update - ICMP DoS Update](https://github.com/user-attachments/assets/ddd0a8d4-e8a0-455a-bc1e-24f138fa78ed)
+
+And it is that easy - I'm going to be looking at Snort more in the new year to see how I can generate rules such as these - so goodbye 2024, hello 2025! 🥳
