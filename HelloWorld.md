@@ -40,6 +40,7 @@ While also completing my labs and research, I am currently in the process of rev
 | 7. SIEM with Splunk Enterprise                             |  <code> SIEM </code> <code> Splunk </code> <code> Analysis </code> <code> Data Query </code>
 | 8. Investigation into Emerging Techniques in Cybersecurity |  <code> Personal Development </code> <code> News </code> <code> Analysis </code> <code> Blogging </code>  
 | 9. Zeek                                                    |  <code> Network Analysis </code> <code> Zeek and Zeek Logs </code> <code> Data Query </code>
+| 10. Suricata                                               |  <code>Suricata</code> <code>IDS and IPS</code> <code>YAML</code> <code>Rule Making</code>
 
 ### Labs 
 
