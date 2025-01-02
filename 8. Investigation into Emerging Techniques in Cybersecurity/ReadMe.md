@@ -2,7 +2,7 @@
 
 ## Overview
 
-This blog looks at recent news stories and cybersecurity blogs to look into the emerging techniques and attacks that are coming through in Cybersecurity - as part of my portfolio this is an important part of my personal development as keeping up to date with the latest trends and latest stories in cybersecurity to learn what the latest threats are and what might be considered a risk as part of an associations infastructure. There are many resources online from trusted news outlets to security professionals who blg about recent events. In my belief, as technology grows at the rate it is, the scope of cybersecurity will change with it at the same rate - as we get more devices such as IoT devices for smarthomes and new vunerabilities get found, being able to stay on top of the curve and identify new trends is important. I will be aiming to complete a new blog once every 1/2 weeks.
+This blog looks at recent news stories and cybersecurity blogs to look into the emerging techniques and attacks that are coming through in Cybersecurity - as part of my portfolio this is an important part of my personal development as keeping up to date with the latest trends and latest stories in cybersecurity to learn what the latest threats are and what might be considered a risk as part of an associations infastructure. There are many resources online from trusted news outlets to security professionals who blg about recent events. In my belief, as technology grows at the rate it is, the scope of cybersecurity will change with it at the same rate - as we get more devices such as IoT devices for smarthomes and new vunerabilities get found, being able to stay on top of the curve and identify new trends is important.
 
 #### 3rd December 2024 - The Guardian
 
