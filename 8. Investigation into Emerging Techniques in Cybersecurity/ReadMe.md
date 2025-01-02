@@ -55,3 +55,28 @@ It is clear that just a slight change in wording makes a difference to a Generat
 However what I find really interesting in this article is the discussion of how companies can use generative AI as a defense mechnaism from cyber attacks. I love the idea personally - and one of my favourite things discussed is teaching an AI model to spot deep fakes by being able to differentiate between real content and manipulated content. Overtime the more and more that AI model learns and gathers more data - the more it will be able to find malicious content. When I think about it from a defensive point of view - the use of Generative AI is a good concept and definelty one that in the article the writer suggests companies should be doing. But with this comes a warning which is "You just need to make sure you adopt the technology in the safest manner possible, which makes it more critical for businesses—both those using AI as a tool and those providing AI services—to rely on neutral and independent vendors that provide leading threat solutions versus monolithic platforms that think of security as an afterthought." 
 
 The discussion behind Generative AI is one that is going to be talked about for a long time - in the cyber world a defensive and attacking standpoint - it will be interesting to see how the conversation develops over time with the projection of generative AI and cyber attacks in the future.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+### 2nd January 2025 - The Hacker News
+
+Well first of all welcome to 2025! Let's see what the new year brings - and straight away an article from The Hacker News has peaked my interest already regarding the noticed increase in XSS (Cross-Site Scripting) Attacks.
+
+[The Hacker News](https://thehackernews.com/2025/01/cross-domain-attacks-growing-threat-to.html)
+
+![Crowdstrike](https://github.com/user-attachments/assets/100c73c6-c44a-4932-b3f1-252b52091279)
+
+In the article, the writer raises the point that over the last year - and are an emerging technique used by some of the adveseries as the attack allows them to move laterally though and organisations systems and evade detection purely through using comprimised logins instead of "hacking" into the systems and endpoints. It is interesting that comprimised logins are being more regularly used for attacks rather than using a brute-force attack etc. as the public narrative on hackers is they do all of these fancy attacks by brute-forcing passwords or finding a specific exploit in a system - when actually being able to identify lets say an unused account is a much easier way to access a system and try to evade detection. 
+
+This is further highlighted in the next paragraph of the article which discusses the current state of Identity Security:
+
+"The rise in cross-domain and identity-based attacks exposes a critical vulnerability in organizations that treat identity security as an afterthought or compliance checkbox rather than an integral component of their security architecture. Many businesses rely on disjointed tools that address only fragments of the identity problem, resulting in visibility gaps and operational inefficiencies. This patchwork approach fails to provide a cohesive view or secure the broader identity landscape effectively."
+
+It just highlights the need for security within IT Systems and how it should be a priority as part of a development process rather than as the article says an after thought which is where most of these vulnerabilities come from. In my experience - most end users don't understand the importance of Sign on techniques such as using Microsoft Authenticator - to most it is just an inconvinience to keep having to prove identity with the app to be able to access systems which is where I think a bit of User understanding needs to come in to play to inform the end user of the importance of having these systems.
+
+One of the main talking points in this article is the need for a unified central way, consolidating threat detection and response across identity, endpoint and cloud within a unified platform. This removes the fragmentation when it comes to using different services for idenification and places everything in one service - rather than gathering logs and more from different services which saves time and makes it easier to respond to incidents and monitor activity. 
+
+The article does provide a very good insight into the current state of XSS attacks how they are developing, so well worth more of a read on the article which is linked above.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
