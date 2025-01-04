@@ -231,9 +231,106 @@ The command prompt window will close once the session is complete and then I can
 
 ### Analysis 
 
+From the collector finishing - I get a .mans file within the directory which can be used with Redline to look at the information that Redline has been able to find on the system.
+
+![Analysis - Session Created](https://github.com/user-attachments/assets/b204f61e-7b69-44f1-b90f-0b3fc23ae7b8)
+
+What is interesting to note as well is within the directory - Redline has saved the evidence as HTML files and can all be seen here below:
+
+![Analysis - All Files](https://github.com/user-attachments/assets/8651ad59-0080-4ba3-b0f2-e01304f3dbb7)
+
+The first thing to do is to go back into Redline and select "Analyze Data" and "From a Saved Memory File" - this is where I direct Redline to the .mans file and start the analysis on Redline which will then go through all the files the collector has found:
+
+![Analysis - Creating Session in Redline](https://github.com/user-attachments/assets/c063ce90-2c13-4bc9-9050-8070ef72be0f)
+
+When I first open the analysis on Redline - the first page I am introduced to is a "Start Investigation Page" which is directly on the home page - this pae makes it easier to tell Redline what type of investigation I am conducting and what information I need to find - for example do I need to find out what the user has been searching for - in which case I would tell Redline "I am Reviewing Web History Data" in which Redline will direct me to the URL History from the collector.
+
+![Analysis - Start Investigation](https://github.com/user-attachments/assets/e0f58ed6-3b43-4d88-b0b0-e6bc0fbe6041)
+
+It is good to know this is here, but for the time being I'm going to go through all of the data Redline provides us so lets go through them all:
+
+#### System Information
+
+Provides information about the Operating System, Uptime, BIOS information and much more - very useful! (Please note, my OS is currently Windows 11 but Redline records it as Windows 10 - unsure as to what may of caused this but Windows 11 is one of the unsupported Operating Systems on RedLine - no information about this from my research).
+
+![Analysis - Sys Info](https://github.com/user-attachments/assets/981c485b-82c2-4221-ba1d-b359ad40b75a)
+
+#### Processes
+
+Provides information on all of the processes that are on the system:
+
+![Analysis - Processes](https://github.com/user-attachments/assets/b9bcb059-e6be-4417-b6d6-7fcf7a337d6f)
+
+#### Hierarchy Processes
+
+Provides information on the processes relation to each other through a hierarchal tree:
+
+![Analysis - Hierarchal Processes](https://github.com/user-attachments/assets/76a66b83-cf4d-4376-9871-d823a23b7b0b)
+
+#### Registry
+
+Shows all of the registry information from the system:
+
+![Analysis - Registry](https://github.com/user-attachments/assets/b4b59de2-5d5c-4adc-a339-5d346c93af40)
+
+#### Users
+
+Shows all users on the system and also which groups they are part of:
+
+![Analysis - Users](https://github.com/user-attachments/assets/5a416d2f-b2dc-43d0-9baf-6930f934669d)
+
+#### DNS Entries
+
+All of the DNS Entries that could be found on the system:
+
+![Analysis - DNS Entries](https://github.com/user-attachments/assets/0e09eb12-9b70-461d-a9f1-979365c1c0a7)
+
+#### Disk and Volumes
+
+Disks and volumes that are on the system:
+
+![Analysis - Disk and Volumes](https://github.com/user-attachments/assets/1448f8eb-f85e-429c-9a23-d8e326cee99e)
+
+#### Windows Registry Hives
+
+All of the Registry Hives that Redline could find on the system including SAM, Software and Security:
+
+![Analysis - Registry Hives](https://github.com/user-attachments/assets/699d4e66-1af6-4214-ab2b-57a0a0d418f9)
+
+#### Browser URL Records
+
+URL Records that have been found from the system including file URL records the user has recorded:
+
+![Analysis - URL Records](https://github.com/user-attachments/assets/745a4b31-34fc-4c34-a5d5-dcc9f229da55)
+
+#### Timeline
+
+Timeline of all the events on the system - great little feature if looking at a certain timeframe!
+
+![Analysis - Timeline](https://github.com/user-attachments/assets/52758ccf-bda2-4ac5-835c-1c175cc878f8)
+
+Now that I have seen all the information Redline can give - it is time to look at the IOC part of Redline in which Redline uses an IOC file to look on a system to try and find a match, so lets have a look!
 
 ### IOC
 
+Mandiant has a seperate software called IOC Editor - this lets me create an IOC criteria for Redline to use to look for on a system to see if there is any match on the system - this is great if I know exactly what I am looking for or any characteristics of an IOC I want to be able to find on the system. The first thing to do is to open IOC Editor 
 
+![Madiant IOC Editor](https://github.com/user-attachments/assets/11e825b3-bade-43fd-ad48-47dacce2fb02)
 
+Next I can create a new IOC file which is pretty easy - just need to click File -> New IOC Indicator. Next I can fill in the information fields and then add my indictaors I want Redline to look for - this could be something such as a SHA256 Hash, an IP Address, Process ID and much much more! It is a great tool as it gives a lot of options as to what I can choose to look for in the system. Absolutely grand stuff! So I've filled out some info as a proof of concpet and now I have a IOC file ready for Redline to use - all I need to do is save it to a directory and there we go!
 
+![Indicator Made](https://github.com/user-attachments/assets/0b2a041b-4d54-484e-b835-5814e65c25d6)
+
+Next is to go back to Redline and choose the "IOC Search Collector" option:
+
+![IOC Search Collector](https://github.com/user-attachments/assets/efe44463-96b2-4d63-b134-613e8e9ae4da)
+
+From there I can select my directory where all the IOC files are saved and choose the IOC File I want to use in the collection of data:
+
+![Search Collector - IOC Config](https://github.com/user-attachments/assets/6ac597fc-0eb8-425a-81de-95e0e799bec2)
+
+From there I get the same options as before on a Standard Collector and then I run the batch file - from here it is pretty much the same process as I will get a .mans file I can use for analysis and see if there was any matches on the IOC.
+
+![Search Collector - Rest of info](https://github.com/user-attachments/assets/36a7b5cc-6ea0-4e2e-ae6d-e291bc2a9e85)
+
+Honestly I think the IOC Editor with the IOC Collector is amazing, if I have a large collection of IOC files that I have of known malware etc. then it makes it a really streamlined process to choose an IOC and then look for it on a system - the whole Redline process is really nice and really good as an investigative tool - definetly one for the future to keep using and use in real world scenarios!
