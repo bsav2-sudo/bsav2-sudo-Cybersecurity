@@ -2,9 +2,9 @@
 <code>IT & AV Technician</code> <code>Cybersecurity</code>
 <h2 align="left">IT/AV Technician | ISC2 Member | CCST Technician (Networking) | ISC2 Certified in Cybersecurity </h2>
 
-<p>🔭 I am currently working as an IT/AV Technician</p>
-<p>🥬 Currently I am working towards gaining a GIAC Intrusion certification as well as gaining experience within my own homelab</p>
-<p>💻 My latest projects include conducting PCAP analysis, a Raspberry Pi Firewall and researching the latest in Cybersecurity
+<p>🔭 I am currently working as an IT/AV Technician.</p>
+<p>🥬 Currently I am working towards gaining a Juniper Mist AI certification as well as gaining experience within my own homelab configuring network devices and working on various computer hardware.</p>
+<p>💻 My latest projects include conducting PCAP analysis, configuring Network Devices and Databases, learning about the latest computer hardware and keeping up to date with Cybersecurity updates.
 <p>👨‍🦱 Coming from a Live Events background - I bring a new way of creative thinking
 
 <h3 align="middle"> 💡 My favourite quote: </h3>
