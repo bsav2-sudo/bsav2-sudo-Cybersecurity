@@ -1,4 +1,4 @@
-# 3. IDS and IPS with Snort
+# 3. IDS and IPS with Snort and Suricata
 
 ![png-clipart-snort-illustration-snort-logo-icons-logos-emojis-tech-companies](https://github.com/user-attachments/assets/12a2b460-4319-4bd9-9c0b-c8b7d6feca09)
 
