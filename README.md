@@ -3,8 +3,8 @@
 <h2 align="left">IT/AV Technician | ISC2 Member | CCST Technician (Networking) | ISC2 Certified in Cybersecurity </h2>
 
 <p>🔭 I am currently working as an IT/AV Technician.</p>
-<p>🥬 Currently I am working towards gaining a Juniper Mist AI certification as well as gaining experience within my own homelab configuring network devices and working on various computer hardware.</p>
-<p>💻 My latest projects include conducting PCAP analysis, configuring Network Devices and Databases, learning about the latest computer hardware and keeping up to date with Cybersecurity updates.
+<p>🥬 Currently I am working on my Cybersecurity skills including writing IDS rules and understanding the most common types of Cyber Attacks</p>
+<p>💻 My latest projects include conducting PCAP analysis, configuring Network Devices and Databases and understaning YARA and IDS rules</p>
 <p>👨‍🦱 Coming from a Live Events background - I bring a new way of creative thinking
 
 <h3 align="middle"> 💡 My favourite quote: </h3>
