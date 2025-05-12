@@ -78,5 +78,35 @@ One of the main talking points in this article is the need for a unified central
 
 The article does provide a very good insight into the current state of XSS attacks how they are developing, so well worth more of a read on the article which is linked above.
 
+#### 12th May 2025 - ITVX (M&S + Co-op Cyber Attacks)
+
+So its been a while since I updated this blog - work has been heavy at the moment since the start of January as well as keeping up with my Cybersecurity knowledge and BAU tasks that I have going on. So this is my first actual look at the news that has been hitting the UK for the past couple of weeks - which is the cyber attack going on with retail giants M&S, Co-op and also Harrods.
+
+[ITVX Article](https://www.itv.com/news/2025-05-12/m-and-s-and-co-op-what-we-know-weeks-after-cyber-attacks)
+
+So what is this all about - basically there has been a cyber attack which first started with M&S - whose systems were comprimised meaning that online ordering systems, card payments and more are affected. The Co-op then said some of their systems had been taken offline as they had an attempted cyber attack on their systems, and then Harrods also came out and said they had suffered a cyber attack and were working to get their systems back online.
+
+I really want to focus on M&S with this piece as they were the first ones to report the cyber attack and two weeks on from the initial statement - most of their systems aren't back online or in the same state as before the attack. Furthermore it is not just the systems that they have been affected by - user data and credentials have also been stolen (from both staff and customers) which just puts into perspective how much access the hackers have to their systems. 
+
+So what do we know about the attack - well new information is coming to light about how the initial access that the hackers got - and when I first read it I thought it was a joke - but it's no joke. The hackers according to the article impersonated an employee with administrative access - saying that they needed a password reset and contacted the M&S IT Support team via phone to get it reset. First question that has got to be asked here is - who is the M&S IT Sservice Desk Team - is it outsourced or is it in hoouse? What permissions does the Service Desk team have for resetting high-priveleged or in this case just any privileged account passwords? Well we get the answer as apparently the hackers were able to get the password reset for the account.
+
+Now in this day - one layer of security isn't enough and that would be right - as the next hurdle to overcome is 2FA or MFA - which M&S do have enabled for accounts. However - the hackers were able to get past this with a technique known as sim-swapping.
+
+> Sim Swapping: Unauthorized SIM changes, sometimes called SIM swapping or SIM hijacking attacks, occur when a customer’s phone number is transferred to a different SIM card or eSIM profile under the control of a criminal. If the SIM swap is successful, the criminal may intercept the customer's phone calls and text messages to receive one-time security codes from social media, banks, credit card companies, cryptocurrency exchanges, and other financial institutions, allowing them to potentially access those accounts and cause financial and reputational harm to the customer. (Verizon, 2025)
+
+Becuase the hackers were able to sim swap - they could authorise the MFA and get access to the account - and now they are into the M&S systems and into a high-privileged account.
+
+Lets just take a second to pause here - this could all of easily been avoided if the IT Service Desk team didn't allow the hacker to reset the password - or even if they asked some security questions to confirm the identity of who was calling. Doing a password over the phone is always dangerous so what could have made them do this in the first place - is it something they have been told to do - is there a process in place? In my mind if the IT Service is outsourced from the company itself - it makes it a lot harder to manage and also to be able to know what procedures are in place. Also why would 1st Line IT have the ability to reset passwords? A lot of questions to be asked an so far not many answers from the retailer. I even remember when the news story first came out - I spoke to one of my friends who is a Cybersecurity Analyst and we both agreed there was something not right about the whole situation - the communication from the company to the media itself and the way in which it was being dealt with until the NCSC got involved.
+
+Just goes to show - the fundamentals are **vital** in order to stop cyber attacks happening, if the basics aren't done correctly then how can it be expected that a cyber attack won't happen?
+
+One final bit I found interesting is this part:
+
+" It is believed that once they had enough access, they used M&S's Active Directory, a Microsoft product that connects internal networks and stores information. "
+
+Next question is - it's been two weeks - surely they can see their logs and try and trace back the movement of this comprimised account through AD. If the hackers have been able to tamper with the logs then okay it makes it harder to find but surely there are some IOC's that are clear - especially as the hacker group used ransomware on may systems to take them offline. I may be thinking about this in the wrong way but I think it's clear that whatever security systems are in place for M&S IT need to be clearly looked at because in an ideal world - althought you can't prevent attacks like these (unless of course you don't give IT seervice desk password reset privileges) - you most definetly can make suitable arrangements to pick them up as soon as they do happen with logs, IOC's, SIEM solutions and much much more.
+
+I'll leave at here today as of course - this is only reports of what has happened and we still wait to see what M&S say about the attack from their side.
+
 -----------------------------------------------------------------------------------------------------------------------------
 
