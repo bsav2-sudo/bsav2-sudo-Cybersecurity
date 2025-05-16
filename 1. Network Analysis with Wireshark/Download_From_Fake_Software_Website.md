@@ -16,4 +16,38 @@ Here is also a link to the scenario if you want to go and have a look - there is
 
 ## PCAP Analysis 
 
-For this analysis 
+For this analysis - I wanted to use something over than Wireshark to get a new experience of working with a different workspace - I decided in this case to use Zui with the Suricata detection rules added - for this challange I had heard about the program with Suricata rules and wanted to see if it made life any easier when finding the answers.
+
+For this task there are several questions that need to be answered:
+
+<img width="470" alt="Tasks" src="https://github.com/user-attachments/assets/6281c4c5-7e27-4b42-8ac9-6e4863126de4" />
+
+Okay - lets start at the very beginning (a very good place to start). So we are looking for the IP Address of the infected Windows client - I think the best place to start looking for this will be through the smb_mapping packets - jsut as this might give some details into the user as well so we can tick two boxes in one. Going into Zui and entering the search term __path="smb-mapping" brings me all of these packets and...
+
+<img width="1439" alt="IP Address" src="https://github.com/user-attachments/assets/d9d07e27-fc8a-4f1a-a1c5-24c8573f8a7b" />
+
+Okay I can clearly see one IP that also had a host name on it so that gives us two of the answers:
+
+IP Addr == 10.1.17.215
+Host Name == WIN-GSH54QLW48D
+
+I can confirm the host name by just expanding the tab and seeing the name...
+
+<img width="953" alt="Host Name" src="https://github.com/user-attachments/assets/f3f3e13e-4dac-4f51-b262-995cf76b6a63" />
+
+Yep this looks like our host - cool we've got two in one there - so lets go to the next question - what is the MAC address of it. Well within Zui I can see that there are some DHCP packets flying about - so maybe one of these will give us an answer if we can find our IP Address.
+
+<img width="958" alt="MAC Address" src="https://github.com/user-attachments/assets/6979ddbf-0653-4a64-8509-90a568efb271" />
+
+Yep we can see here our IP address was given by 10.1.17.2 - and within the fields is the MAC Address - another nice easy win there so lets get that down:
+
+MAC Address == 00-d0-b7-26-4a-74
+
+Okay next is the user - now I think a good place to start would be to look at the kerberos packets and just see what information appears on there - if I am lucky there may be some LDAP's on there that could just give us the user's name.
+
+<img width="956" alt="User Account" src="https://github.com/user-attachments/assets/53bd1b2b-de37-4a1a-b9df-d4e5bf943757" />
+
+Yep there we go as I can see here we have a few LDAP's which give back a username and match the domain - I'm quite confident this is going to be our user so lets note it down:
+
+User == shutchenson
+
