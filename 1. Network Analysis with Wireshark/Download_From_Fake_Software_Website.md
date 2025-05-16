@@ -28,8 +28,8 @@ Okay - lets start at the very beginning (a very good place to start). So we are 
 
 Okay I can clearly see one IP that also had a host name on it so that gives us two of the answers:
 
-IP Addr == 10.1.17.215
-Host Name == WIN-GSH54QLW48D
+>IP Addr == 10.1.17.215
+>Host Name == WIN-GSH54QLW48D
 
 I can confirm the host name by just expanding the tab and seeing the name...
 
@@ -41,7 +41,7 @@ Yep this looks like our host - cool we've got two in one there - so lets go to t
 
 Yep we can see here our IP address was given by 10.1.17.2 - and within the fields is the MAC Address - another nice easy win there so lets get that down:
 
-MAC Address == 00-d0-b7-26-4a-74
+>MAC Address == 00-d0-b7-26-4a-74
 
 Okay next is the user - now I think a good place to start would be to look at the kerberos packets and just see what information appears on there - if I am lucky there may be some LDAP's on there that could just give us the user's name.
 
@@ -49,5 +49,22 @@ Okay next is the user - now I think a good place to start would be to look at th
 
 Yep there we go as I can see here we have a few LDAP's which give back a username and match the domain - I'm quite confident this is going to be our user so lets note it down:
 
-User == shutchenson
+>User == shutchenson
 
+Okay what domain gave the fake authenticator account - think we should look at the DNS queries - see if we get any results back and any domains that look suspicious - so lets get it entered in Zui and have a look.
+
+<img width="944" alt="Domain Name - Google Authenticator" src="https://github.com/user-attachments/assets/bba4a5ed-c1a3-4b53-a83e-d781b51700ac" />
+
+Looking through the authenticator domains theres a few that are popping out already but one of them looks like a malformed domain name with "authenticatoor.org". Think this is going to be our target so I'll note it down:
+
+>Domain Name == Authenticatoor.org
+
+Right last one - C2 Servers - if there is more than one how many are there. this is where I can implement the Suricata Rules and Alerts as it will pick out suspicious activity and show what the alerts would look like. SO lets input this in the Zui search and see what comes back
+
+<img width="939" alt="C2 - First" src="https://github.com/user-attachments/assets/2ee1726a-f0f8-438a-9dbe-7ce92c992eb2" />
+
+Here's on straight away - this one got picked up for C2 Command and Control - happy this is going to be our C2 server 
+
+>C2 Server == 5.252.153.241
+
+Awesome that's the end of all the questions - thanks for looking at my walkthrough of how I've done this particular scenario - not as in-depth as some of my others but it gets to the point and it was fun to use a different package rather than just Wireshark.
