@@ -3,7 +3,7 @@
 <img src="https://tryhackme-badges.s3.amazonaws.com/bsavosi443.png" alt="Your Image Badge" />
 
 <code>IT & AV Technician</code> <code>Cybersecurity</code>
-<h2 align="left">IT/AV Technician | ISC2 Member | CCST Technician (Networking) | ISC2 Certified in Cybersecurity </h2>
+<h2 align="center">ISC2 Member | CCST Technician (Networking) | ISC2 Certified in Cybersecurity | ITIL v4 Foundation Certified </h2>
 
 <p>🔭 I am currently working as an IT/AV Technician.</p>
 <p>🥬 Currently I am working on my Cybersecurity skills including writing IDS rules and understanding the most common types of Cyber Attacks</p>
