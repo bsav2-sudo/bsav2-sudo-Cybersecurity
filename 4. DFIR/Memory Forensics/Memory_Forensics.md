@@ -1,4 +1,4 @@
-# 4. DFIR
+# Memory Forensics
 
 ![Image](https://github.com/user-attachments/assets/a6958dd8-0428-4803-9ee6-df97c131186d)
 
