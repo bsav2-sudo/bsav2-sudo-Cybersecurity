@@ -59,3 +59,26 @@ Hey what do you know that's what we were looking for! And if i double click it t
 
 > Main function which contains the "ohh noo" string
 
+That's what we want to see. I can see from this that there is two strings one which is our "ohh noo" and another one which is "!crackme!" - If I was a betting man I would be thinking that the string which is "!crackme!" is going to be the one that outputs if we are successful with the password. Looking at the two instructions before the string I think this is a safe bet.
+
+<code> cmp dword ptr ss:[rsp+20], A </code> - The **cmp** first is going to compare to values together 
+
+<code> jne crackme.password.7FF7546E1BC0 </code> - The **jne** is then going to jump if the outcome of that comparison does not equal each other
+
+Okay I think I want to go with this compare function - beacuse if the comparison of the values don't equal each other - then the program jumps to the "ohh noo" string - but if they do equal each other it will bypass the jne instruction and go to the "!crackme!" string instead.
+
+When analysing the compare instruction - there is a hexidecimal value at the end which is 1 out of the 2 compared values - when turning this into decimal we get this...
+
+<img width="1439" alt="4  Compare " src="https://github.com/user-attachments/assets/53dad5e3-7891-49cb-b269-52d850255ccb" />
+
+> Compare instruction with the hexidecimal value into a decimal value in the left pane
+
+Okay now we are getting somewhere - so if both the values are equal to each other we will have the password - and if one of the values is 10, the other value must have to be 10...
+
+Well okay then - let's try it in the program
+
+<img width="869" alt="7  Result" src="https://github.com/user-attachments/assets/d7702cea-9bd3-4995-b590-9ff92a0c78f9" />
+
+> Value 10 being run in the program - Password is correct
+
+There we go mystery solved! Our password is 10. This was a nice easy one but a really good one to get my feet into reverse engineering - what a nice challange - but it's only getting to get harder from here!
