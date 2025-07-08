@@ -55,3 +55,33 @@ Looking at the IP address - we get a location of what looks like a Gmail mail se
 Confirms that the email came from a gmail domain and also may have came from Finland but doesn't tell us any more about the user who sent it. Looking further down the screenshot before on the DKIM - we can actually see the details of the Google-DKIM-Signature. 
 
 These two checks (SPF and DKIM) show how the email was able to be sent to us without being stopped on the way of transmission. This is why when a phishing email does arrive at a users email - the ability for the user to be able to look at the email and identify it's phsihing is so important - and this can be done through the correct user training and phishing simulations on what to look for in an email - which may be obvious to us as people with technical knowledge but to the average user may not be that noticable - and also being able to report these emails to IT Security so that they can implement the correct procudures such as SPF/DKIM rules or firewall rules etc.
+
+## Sample806
+
+Okay next lets take a look at one of the other phishing emails - this time it looks like we have a rewards email from a company called "Binance" saying that they have just reached 120 million user and are giving away BNB points - but we have to use them quickly as they only have a limited amount and are on a first come first served basis.
+
+Ok, like the last one - the first question I'm going to ask is when did I ever make a Binance account? Have I ever even had one? If the answers no then I would be looking at it as a major red flag.
+
+There's no content such as PDF files in this email however we have got a button that says "Join Airdrop" - not a clue where this would take us as I don't want to really press it without knowing what it is going to do first. Something I could consider for investigation later.
+
+![Original](https://github.com/user-attachments/assets/5f264d2c-f6ab-49b7-adea-6b6f5ea25441)
+
+Also looking at the Subject of the email - it also points to it being a red flag - telling you that you can claim 500 BNB NOW to add some time pressure to the email for the user to respond to.
+
+<img width="1440" alt="SUBJECT CONTENT" src="https://github.com/user-attachments/assets/815019d0-d3cc-447e-b0dc-d5c37ab595df" />
+
+Looking at the DKIM and the SPF - there is no DKIM signature for this message - however there is a pass on the SPF check as it has a domain of yx2nqoz.onmiscrosoft.com with .onmicrosoft.com being an authorised domain. So while there is no DKIM check that takes place there is a SPF check that can be completed which does allow the email through filtering.
+
+<img width="1440" alt="AUTH-RESULT+SENDER IP" src="https://github.com/user-attachments/assets/53af0be3-7897-4bc6-9ef6-78fa9f96e279" />
+
+We can also see in this screenshot there is a sender IP Address - and looking at it - it looks to be another mail server which is located in Iowa, USA...
+
+<img width="375" alt="Mail Server IP" src="https://github.com/user-attachments/assets/09ef062d-188a-4d87-b4c5-857cf1739cd5" />
+
+The one last thing that is interesting about this email is the ARC-Message Signature and ARC-Authentication-Result. In this header it looks like the email goes through the authentication - and most interestingly has a part that says dmarc=bestguesspass.
+
+DMARC (Domain-based Message Authentication, Reporting, and Conformance) is an authentication protocol that uses DKIM and SPF to verify the sender's identity and specify how receiving email servers should handle messages that fail authentication. As you can see this email passed with the argument "bestguesspass".
+
+According to the DMARC documentation - "bestguesspass indicates that no DMARC TXT record exists for the domain exists. If the domain had a DMARC TXT record, the DMARC check for the message would have passed".
+
+Very cool to see how this email passed the authentication checks and how DMARC makes a best guess attempt when there is no DKIM signature available.
