@@ -27,4 +27,35 @@ So without further ado lets get started!
 <code> Platform: Windows </code>
 <code> 📗 Difficulty: 1.3 </code>
 
+### Getting Started
+
+First things first, I want to know how this program behaves without looking into it - what does the program do when you launch it and what does it ask for. When launching the program we just get a blank command prompt but after entering random characters we get a message that says "ohh noooo" - okay so not as easy as we think.
+
+<img width="868" alt="1  Program Running" src="https://github.com/user-attachments/assets/7d59662b-178a-450b-aad0-2200e9391479" />
+
+> Executable being run with a test argument 
+
+<p>So it looks like we need to enter a password which should give us a response that says we've cracked the password - only we don't know what that message is yet and we only know what the incorrect answer message is - however this should be enough to go off when we step into the program. My weapon of choice today is going to be DBG x64 - as a program I love it for being able to see what is being loaded into registers as well as finding strings and following everything in the memory dump - this isn't to say IDA and Ghidra don't do those things - I just like the layour and GUI DBG x64 offers 😄 so lets get it open and find our entry point in the program.</p>
+
+### DBG x64 Operations
+
+<img width="1439" alt="2  Loaded and Entry Point" src="https://github.com/user-attachments/assets/42bb235e-c756-41bb-877e-a557e9a3cda1" />
+
+> Executable loaded into DBG x64 and Entry Point highlighted with red border
+
+Cool - we can now see the program loaded into DBG x64 and as soon as we run the program we get our starting entry point for the program - awesome! When stepping into the program for the first instructions - I expect to see some environments and threads etc. being setup and I'd be right in thinking this as some of the Windows API gets called such as GetCurrentProcessID, QueryPerformanceCounter and more with different arguments being given to these API calls - what I love about this process is I can go to my search engine and search for the API call e.g. GetCurrentProcessID followed by msdn and the first result will always be the API function documentation from Microsoft, luckily Microsoft keeps these up to date and have legacy fucntions too meaning the information is all in one place! 
+
+Anyways I am getting ahead of myself here - setting up everything for the program is great and all but that is not what we are here for - we want to see what argument we have to give the program to give some sort of success message. This is where being able to search for strings is super useful - if I **Right Click** in dbg x64 and go to <code>Search for -> All Modules -> String References</code> I get the References window which will look for strings within the programs - now obviously even though this is a small program there are a lot of strings so we need something that we know gets printed on the command prompt.
+
+Oh I remember - that sarcastic message that says "ohh noo" - let's have a search for that in References...
+
+<img width="1439" alt="2b  String Search" src="https://github.com/user-attachments/assets/67432e7e-32e2-46d4-9a2c-2687cbbe0cf3" />
+
+> Search for "ohh noo" in References inside of dbg x64
+
+Hey what do you know that's what we were looking for! And if i double click it to go to the instructions...
+
+<img width="1439" alt="3  Main Function-ohh no comment" src="https://github.com/user-attachments/assets/8d445025-13c2-4851-855b-42bb1bd3b091" />
+
+> Main function which contains the "ohh noo" string
 
