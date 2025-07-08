@@ -80,6 +80,8 @@ We can also see in this screenshot there is a sender IP Address - and looking at
 
 The one last thing that is interesting about this email is the ARC-Message Signature and ARC-Authentication-Result. In this header it looks like the email goes through the authentication - and most interestingly has a part that says dmarc=bestguesspass.
 
+<img width="1440" alt="ARC-MESSAGE-SIGNATURE" src="https://github.com/user-attachments/assets/96f30c84-d993-4b37-9b93-d863aaefa419" />
+
 DMARC (Domain-based Message Authentication, Reporting, and Conformance) is an authentication protocol that uses DKIM and SPF to verify the sender's identity and specify how receiving email servers should handle messages that fail authentication. As you can see this email passed with the argument "bestguesspass".
 
 According to the DMARC documentation - "bestguesspass indicates that no DMARC TXT record exists for the domain exists. If the domain had a DMARC TXT record, the DMARC check for the message would have passed".
