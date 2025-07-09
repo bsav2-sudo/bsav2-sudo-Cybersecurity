@@ -238,3 +238,54 @@ Okay I'm pretty happy this is what we are looking for as the first answer let's 
 
 ### Second Answer
 
+Ok time to get the second answer now - for this I can already see the string which asks us for the second "serial" 
+
+<img width="1024" alt="10  Get Second Value" src="https://github.com/user-attachments/assets/ffaa71e5-75f9-427a-85dd-1d36150f213e" />
+
+> Second serial question
+
+Looking down the instructions this isn't going to be as simple as a compare instruction as when we look at the success statement there are no comparisons made before it...
+
+<img width="872" alt="11  When we get the correct answer" src="https://github.com/user-attachments/assets/3d3f3f9d-4fee-4e84-a3be-36b119702732" />
+
+> If serial number 2 is correct
+
+Shame there's going to be something else going on - hold on let me go back to the success message from the 1st answer - something didn't seem right about that message...
+
+<img width="419" alt="12  What computer am i on" src="https://github.com/user-attachments/assets/0570e687-81f6-4252-8173-92ecf8ea01e1" />
+
+> What computer am I on????
+
+I mean I know exactly what computer I am on it's mine but what can it be asking - could it be asking for a Computer Name?? Well from Windows I know there is a computer name assigned to the laptop I'm using - but how will the program know about this? There could be one explination for it which we can go looking now - are we doing any Windows API calls which would return a computer name?
+
+Well after digging in strings and matching them with the MS documentation, I found this API call being made...
+
+<img width="1107" alt="13  Get Computer Name Call" src="https://github.com/user-attachments/assets/7a5a825e-ef25-474d-8c4c-a1c7f653fd16" />
+
+> GetNamedPipeClientComputerNameW being called in instructions
+
+Okay I'm going to be fairly confident the answer is my computer name. I'll make a note of it and lets move to the final answer. 
+
+### Final answer 
+
+This one is actually quite easy - I can already see crackmej1.2014E3 is being moved to the edx register which is then used later and tested for the correct statement. And looking at the string I'm going to say it is this.
+
+<img width="1112" alt="14  Final one - look at that string!" src="https://github.com/user-attachments/assets/1f32c249-ec95-4f15-ab78-7c2e0cefff06" />
+
+> Final string used for answer 3
+
+Let's use this as the final answer and then get it all put into the program and see how we do:
+
+<img width="1439" alt="15  Success" src="https://github.com/user-attachments/assets/f392ab11-5597-4b0f-b7ed-046b0362c491" />
+
+> Success
+
+After testing this it was a success and all "serials" - when the program is complete then it just shuts itself automatically. One thing I have just noticed however when writing this up is there is actually another anti-debugger technique being used in this program - the only reason it didn't get triggered when I entered the answers was because I ran the program natively and not through a debugger.
+
+<img width="1112" alt="16  IsDebuggerPresent" src="https://github.com/user-attachments/assets/321fe9b7-4380-4421-b28f-b95c6ac8a3ee" />
+
+> Windows API - IsDebuggerPresent
+
+As you can see in the green highlight - the Windows API "IsDebuggerPresent" gets called - this API determines whether the calling process is being debugged by a user-mode debugger. This function allows an application to determine whether or not it is being debugged, so that it can modify its behavior. For example, an application could provide additional information using the OutputDebugString function if it is being debugged. (Microsoft, 2025)
+
+A way to get past this would be to put the value in the register as 0 when this function is called - as when a debugger is present the value is set to 1 and then tested with eax registers - if the value is 0 then it tells the program that no debugger is present and it can move on as normal.
