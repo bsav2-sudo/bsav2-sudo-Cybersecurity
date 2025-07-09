@@ -160,3 +160,81 @@ So lets run the "QuiteEasyRight" in the program and see what happens...
 > Success
 
 And there we are - another program reverse engineered to find the password! This one was quite fun to work on in Ghidra - however I think I might keep using DBG x64 but always good to keep using different programs as they offer different ways of working!
+
+<br>
+
+## CrackMe J1 Write-Up 
+
+### Program Information
+
+<code> 📘 Name: CrackMe J1 </code>
+<code> 👨‍🔬 Author: juansacco </code>
+<code> 💻 Language: C/C++ </code>
+<code> Arch x86 </code>
+<code> Platform: Windows </code>
+<code> 📙 Difficulty: 2.0 </code>
+
+### Getting Started
+
+Right lets take it up a notch with this reverse engineering - because it isn't going to be as easy as looking at a program's main function and then tracing back - a threat actor is going to use as many tactics as they can to stop someone like us from looking at their code (also known as anti-debugging). One of these anti-debugging tactics is to implement parts of the code to look for a debugger being present - in this crack me were are going to see exactly that.
+
+So first things first lets get the program up and see what it wants us to do...
+
+<img width="872" alt="1  Loaded" src="https://github.com/user-attachments/assets/01741d89-6299-4c05-8498-c4b07747cf08" />
+
+> Running the program for the first time
+
+Okay so there's going to be several parts to this crack me, and they are going to ask for serials? Strange I normally go with Weetabix but anyways there's one message we can look for when we put it in the debugger. Speaking of which lets get it loaded into DBG x32 (seeing as though we are now dealing with a 32-bit binary):
+
+<img width="1439" alt="2  Locked and Loadewd" src="https://github.com/user-attachments/assets/735d479c-8125-4a2e-a9b5-8cebff222a7c" />
+
+> CrackMe J1.exe loaded into DBG x32
+
+Cool, as in the other ones the first thing I am going to do is conduct a string search - see if I can find the string from where we first ran the program which asked us for the first serial. And boom we get a hit as well as hits on the other questions that are going to be asked and the instroduction script.
+
+<img width="1439" alt="3  Strings of Searching" src="https://github.com/user-attachments/assets/80fdf603-ce9a-49be-9b50-60187fa9528c" />
+
+Just looking at the rest of teh strings - it looks like we have some padding going on with the same string being repeated at different addresses over and over again "What are you looking at? ;-)"
+
+> Padding definition: In reverse engineering, padding refers to extra data inserted into a data structure or file format to align elements to specific boundaries or to obscure the true data structure. This padding is added during compilation or file creation and can complicate the reverse engineering process by introducing seemingly arbitrary bytes that need to be accounted for when analyzing the code or data.
+
+<img width="1439" alt="4  Nice Pad" src="https://github.com/user-attachments/assets/42e93290-4fa9-4892-92e5-e6f5905b6279" />
+
+> Nice pad
+
+Good to see this in action but let's not let it distract us from finding the answers - however when going back to the CPU section of DBG x32 - we can see there is a windows command which calls the following:
+
+<code> C:\\Windows\\System32\\shutdown /s /t 5 \n\n </code>
+
+<img width="987" alt="5  Windows Shut Down command" src="https://github.com/user-attachments/assets/8901e165-ab78-497f-b7de-0dec51fee018" />
+
+> Windows shutdown commmand being found 
+
+Basically if you give the wrong answer this action will be performed and shut down the PC, clever. I'm going to skip past this for now as I can just look at the code to find the correct answers but again another anti-debugging technique being found within the reverse engineering - we can also see this application in System32 - a very simple but effective way to stop someone from trying to reverse the program.
+
+<img width="605" alt="5b  Windows Shut Down in C" src="https://github.com/user-attachments/assets/599d5811-a159-4448-b0f3-a9127db5ad68" />
+
+> Shutdown application found in C:\Windows\System32
+
+Anyways back to the investigation and ask you can see I've found the string which gave us that message asking for the first serial...
+
+<img width="1136" alt="7  Interesting" src="https://github.com/user-attachments/assets/da14e7d6-8b30-4cac-8609-73d25aefb484" />
+
+> String being within the Assembly code
+
+Okay so lets dissect this a bit further - do we have any cmp instruction that is being used before any type of success message - oh look at that we do...
+
+<img width="1048" alt="8  Answer Section - Need to find value" src="https://github.com/user-attachments/assets/a0415d7e-da44-4e9e-828f-d3ff41470d6b" />
+
+> Cmp instruction followed by success statement and then asking for 2nd Serial
+
+Okay this is good - so now lets look at this compare statement and see what we are looking for - the step to the statement is only met if the numbers are equal - if they are not they go to unsuccessful statement so whatever these values are they need to be the same - to know this number I can either take 14 away from the ebp register at time of running or I can run the compared value to decimal format to see what it would be...
+
+<img width="1439" alt="9  Compare with value 1337" src="https://github.com/user-attachments/assets/6e030ea7-346d-4962-8463-aa08038934c1" />
+
+> Comparison value is 1337
+
+Okay I'm pretty happy this is what we are looking for as the first answer let's move on to the second one.
+
+### Second Answer
+
