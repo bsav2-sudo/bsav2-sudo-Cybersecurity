@@ -12,6 +12,8 @@ This project looks at **3** PCAP files obtained from the Wireshark Wiki page. Th
 
 ## PCAP Analysis 
 
+<br>
+
 ## 11-DAYS-OF-SCAN
 
 Context: This file contains traffic information which is collated over 11 Days - **Suspected Scanning From External Host**
@@ -112,6 +114,8 @@ Another way to be able to mitigate from this type of scan is to <code>block know
 
 Furthermore - one of the other possible ways to mitigate this scan from taking place is by having <code>rate-limiting implemented on the network from incoming connection requests</code>. This can be considered the "threshold" for the incoming connections to the network and limits the ammount of incoming connections allowed on the network. The reverse of this would be also adding more backlog to the server or network so that when SYN packets are sent over the network, a server is able to handle all the SYN packets it receieves.
 
+<br>
+
 ## TCP_SYN_SCAN
 
 Context: A TCP SYN Flood scan that has taken place on a network.
@@ -164,6 +168,8 @@ One of the ways to be able to mitigate against this style of scan is by setting 
 Another way to be able to mitigate from this type of scan is to <code>block known malicious IP Addresses</code> - this a basic yet effective strategy as it the network will block these IP Addresses from being able to communicate over the network and so stopping scans from happening from untrusted IP Addresses.
 
 Furthermore - one of the other possible ways to mitigate this scan from taking place is by having <code>rate-limiting implemented on the network from incoming connection requests</code>. This can be considered the "threshold" for the incoming connections to the network and limits the ammount of incoming connections allowed on the network. The reverse of this would be also adding more backlog to the server or network so that when SYN packets are sent over the network, a server is able to handle all the SYN packets it receieves.
+
+<br>
 
 ## EXPLOIT_METASPLOIT_CVE2012_1723
 
@@ -224,6 +230,8 @@ Now being the curious person I am - I really want to see what this payload is an
 #### Mitigate against CVE2012_1723
 
 Because this is a known vulnerability - it would be **highly** reccomended to patch and update Java software as soon as it becomes publicly available as this will patch this exploit. Reading the Relase Notes for the next update/patch would be able to identify that this vulnerability has been highlighted and fixed. It would also be recommended to block the JAR file from being downloaded or executed - this could come in the form of ebing added to a blacklist at Network level so that if the .jar file is detected on the network it can be removed or at a Endpoint level where an Agent such as Arctic Wolf's <code>Arctic Wolf Agent</code> would see this jar file and remove it from the users device before it could be executed.
+
+<br>
 
 #### Update 23-11-24
 
