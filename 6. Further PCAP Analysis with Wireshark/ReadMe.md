@@ -12,6 +12,8 @@ This project looks at **3** more PCAP files that I have sourced from the interne
 
 ## PCAP Analysis 
 
+<br>
+
 ## ARP-STORM
 <p>Context: This file contains traffic information from what is a suspected ARP Storm</p>
 <p></p>File Size: 46.1 KB</p>
@@ -57,6 +59,8 @@ To stop an ARP Broadcast Storm from happening on the network - the following ste
 - Double check for duplicate IP Addresses on the network to make sure there is no conflicting IP Addresses - if there is then it would be a case of changing an IP Address on one of the devices to stop it conflicting
 - Implementing storm control (Cisco devices) and configure ARP Rate limiting - this will limit the rate that ARP packets that are sent over the network while implementing storm control will look at the broadcast, unicast and multicast packets being sent to a port - if it reaches over a certain threshold then the Strom Control will take action depending on the parameters set.
 - If hardware is old then it might be worth considering newer hardware as they will be able to cope with higher amounts of traffic being sent to a port such as broadcast packets lowering the expectation of an ARP Broadcast Storm being able to cause Denial of Service (DoS).
+
+<br>
 
 ## Monitor Mode - 802.11 Analysis
 <p>Context: This file contains traffic information from a wireless network.</p>
@@ -158,6 +162,8 @@ Just to have a quick look, when a client wants to join a wireless network - the 
 This project gives a basic over look at the 802.11 protocol within Wireshark and how to look at certain frames as well as information about beacon points as part of a wireless network. There are more frames etc. that can be looked at within Wireshark - and as I love a nice cheat sheet I've found one online that provides Wireshark filters to be able to use. Overall I found this project quite interesting as it visibly shows the process of authentication between a device and beacon on a network which is more than what meets the eye. Wireshark filters are below:
 
 ![Wireless Wireshark Filters](https://github.com/user-attachments/assets/cdadcefc-aa73-447a-a251-6a18943e1759)
+
+<br>
 
 ## IPv4 Fragmentation
 
