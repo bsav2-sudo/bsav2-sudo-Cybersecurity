@@ -6,7 +6,7 @@
 <h2 align="center">ISC2 Member | CCST Technician (Networking) | ISC2 Certified in Cybersecurity | ITIL v4 Foundation Certified </h2>
 
 <p>🔭 I am currently working as an IT/AV Technician.</p>
-<p>🥬 Currently I am working on my Cybersecurity skills including writing IDS rules and understanding the most common types of Cyber Attacks</p>
+<p>🥬 Currently I am working on my Cybersecurity skills including DFIR skills such as Reverse Engineering and Malware Analysis</p>
 <p>💻 My latest projects include conducting PCAP analysis, configuring Network Devices and Databases and understaning YARA and IDS rules</p>
 <p>👨‍🦱 Coming from a Live Events background - I bring a new way of creative thinking
 
