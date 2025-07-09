@@ -16,6 +16,8 @@ Before I get started I want to clarify that I have already watched some tutorial
 
 So without further ado lets get started!
 
+<br>
+
 ## Password-cmd Write-Up 
 
 ### Program Information
@@ -82,3 +84,79 @@ Well okay then - let's try it in the program
 > Value 10 being run in the program - Password is correct
 
 There we go mystery solved! Our password is 10. This was a nice easy one but a really good one to get my feet into reverse engineering - what a nice challange - but it's only getting to get harder from here!
+
+<br>
+
+## CrackMe Write-Up 
+
+### Program Information
+
+<code> 📘 Name: CrackMe </code>
+<code> 👨‍🔬 Author: Monkeeatingrock </code>
+<code> 💻 Language: C/C++ </code>
+<code> Arch x86-64 </code>
+<code> Platform: Windows </code>
+<code> 📗 Difficulty: 1.1 </code>
+
+### Getting Started
+
+I want to make sure my basic reverse skills are up to scratch, so I'm going to try one more simple crack me but this time I'm going to use Ghidra to reverse this program - just to see what it's like. So lets get started on this one! First things first lets get the program loaded into Ghidra - luckily for us Ghidra has already identified the functions and found the entry point for the program as well.
+
+<img width="1439" alt="1  Ghidra Load" src="https://github.com/user-attachments/assets/ff5c3146-6c79-47f5-927e-f2ed9f199712" />
+
+> Crack Me loaded into Ghidra with identified Entry Point
+
+Cool - but again as in the last one - I want to know how this program actually behaves - what is it going to ask from the user and what are we given from the program that we can look into on Ghidra. So lets get it run - and as we can see we first get a string that says "Welcome to your first Crack Me program!" - we are then asked what password is - if the password is wrong we get a message saying "Authentication Failed" and then asked to press ENTER to exit the program.
+
+<img width="862" alt="2  Program Run" src="https://github.com/user-attachments/assets/4ebcfeff-f55c-4b62-a4a6-9dfa2f01e5a6" />
+
+> Program running with a test user input
+
+Okay so now we know what the program looks like - lets see if I can see where we get the message of "Authentication Failed" - firstly one of the most noticable things I want to look at is the symbol references within Ghidra - and straight away when looking at these references we can see most of the Windows API calls that are being made from CrackMe.exe.
+
+<img width="1439" alt="2b  Imported Functions" src="https://github.com/user-attachments/assets/35287cb9-8b76-45c5-be9a-512a415f201f" />
+
+> Imported fucntions from CrackMe.exe being seen in Ghidra
+
+While this isn't important at the moment it is good to see where these are stored in Ghirda and that we can see this in both DBG x64 and Ghidra. Okay so lets go digging - we know there might be a string reference to "Authentication Failed" so lets search for it using Ghidra - and what do you know Ghidra points us to the function that uses it...
+
+<img width="1439" alt="3  Identified Main Function" src="https://github.com/user-attachments/assets/381e13e5-8b69-4b87-b1f0-70e55cf16dd1" />
+
+> Function that has a string reference to "Authentication Failed"
+
+When we look closely at this function - we can see Ghidra makes a best guess with psuedo code as to what the program may look like in C - I honestly love this feature in Ghidra - I would rather read some best guess C code rather than go through each instruction in assembly. 
+
+As we can see in this psuedo code - there are three strings which are referenced which are of interest - most notable the highlight at the bottom which is given as the following:
+
+<code> pcVar6 = "Authentication Successful."; </code>
+
+<img width="932" alt="4  Main Focus - Authentication" src="https://github.com/user-attachments/assets/9ddc7c43-bbb1-4bfa-b39a-bac25ed156d9" />
+
+> Authentication procedure in pseudo code in Ghidra
+
+Okay that is our aim how are we going to get that message to display what we want - which is the "Authentication Successful" - well looking further into the psuedo code we can see that we have an if statment before the message which looks like it is comparing two values together. What is noticable is the following:
+
+<code> ifVar3 = memcmp (ppppuVar5, &local_30, 0xe);
+      pcVar6 = "Authentication Successful."; </code>
+
+So it looks like if "Variable 3" is equal to those 3 values then we get the Authentication message. So we could be looking for a string here so lets go looking a bit further up the assembly code just to see if anything is declared as a variable. And hey what do you know this looks promising:
+
+<img width="613" alt="6  String Found" src="https://github.com/user-attachments/assets/c22b2454-f9db-488e-9460-e1a042b09a05" />
+
+> String value of "QuiteEasyRight"
+
+Lets check this in the assembly code on the last instructions just to see if we can see this being called...
+
+<img width="638" alt="7  Final Instructions" src="https://github.com/user-attachments/assets/97e628e0-8335-4537-a48a-86be6f1adef6" />
+
+> Final assembly instructions before Authentication message
+
+I'm pretty happy that we are going to be calling that string - looks like we have some move instructions and some compares before a call instruction for **VCRUNTIME140.DLL: :memcmp** which is when we get a test of the EAX register to amke sure they are the same - and if they aren't equal to 0 then we jump to the Authentication Unsuccessful message.
+
+So lets run the "QuiteEasyRight" in the program and see what happens...
+
+<img width="865" alt="8  SUCCESS" src="https://github.com/user-attachments/assets/13624419-86d5-4d83-b109-f834a3cc8210" />
+
+> Success
+
+And there we are - another program reverse engineered to find the password! This one was quite fun to work on in Ghidra - however I think I might keep using DBG x64 but always good to keep using different programs as they offer different ways of working!
