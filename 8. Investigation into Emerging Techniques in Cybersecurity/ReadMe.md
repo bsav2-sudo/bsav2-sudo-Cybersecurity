@@ -4,6 +4,8 @@
 
 This blog looks at recent news stories and cybersecurity blogs to look into the emerging techniques and attacks that are coming through in Cybersecurity - as part of my portfolio this is an important part of my personal development as keeping up to date with the latest trends and latest stories in cybersecurity to learn what the latest threats are and what might be considered a risk as part of an associations infastructure. There are many resources online from trusted news outlets to security professionals who blg about recent events. In my belief, as technology grows at the rate it is, the scope of cybersecurity will change with it at the same rate - as we get more devices such as IoT devices for smarthomes and new vunerabilities get found, being able to stay on top of the curve and identify new trends is important.
 
+<br>
+
 #### 3rd December 2024 - The Guardian
 
 News Story: UK underestimates threat of cyber-attacks from hostile states and gangs, says security chief - by Dan Milmo
@@ -26,6 +28,8 @@ Ben Savage
 16:04 GMT 03-12-2024
 
 -----------------------------------------------------------------------------------------------------------------------------
+
+<br>
 
 #### 4th December 2024 - The Wall Street Journal 
 
@@ -58,6 +62,8 @@ The discussion behind Generative AI is one that is going to be talked about for 
 
 -----------------------------------------------------------------------------------------------------------------------------
 
+<br>
+
 ### 2nd January 2025 - The Hacker News
 
 Well first of all welcome to 2025! Let's see what the new year brings - and straight away an article from The Hacker News has peaked my interest already regarding the noticed increase in XSS (Cross-Site Scripting) Attacks.
@@ -77,6 +83,8 @@ It just highlights the need for security within IT Systems and how it should be 
 One of the main talking points in this article is the need for a unified central way, consolidating threat detection and response across identity, endpoint and cloud within a unified platform. This removes the fragmentation when it comes to using different services for idenification and places everything in one service - rather than gathering logs and more from different services which saves time and makes it easier to respond to incidents and monitor activity. 
 
 The article does provide a very good insight into the current state of XSS attacks how they are developing, so well worth more of a read on the article which is linked above.
+
+<br>
 
 #### 12th May 2025 - ITVX (M&S + Co-op Cyber Attacks)
 
