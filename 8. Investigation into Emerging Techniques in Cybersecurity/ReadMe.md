@@ -118,3 +118,16 @@ I'll leave at here today as of course - this is only reports of what has happene
 
 -----------------------------------------------------------------------------------------------------------------------------
 
+<br>
+
+#### 10th July 2025 - BBC News (M&S + Co-op Cyber Attacks)
+
+Okay so it has been a while (again I know) since I updated this blog but in the last few hours there has been some developments on the M&S Cyber attack - the police at the time of writing have made 4 arrests in the UK in connection with the cyber attack - with charges including  "Computer Misuse Act offences, blackmail, money laundering and participating in the activities of an organised crime group." This doesn't seem like such a big deal but this is the first time I have seen publically that someone/some people have been arrested over participating in activities of an organised crime group - the other charges make sense but this is the first time I have seen such a charge being bought up. And yet is M&S fully back online - no. Nearly 2 months on from the incident.
+
+[BBC Article](https://www.bbc.co.uk/news/articles/cwykgrv374eo)
+
+[BBC Episode - Inside the High-Street Cyber Attacks](https://www.bbc.co.uk/iplayer/episode/m002d2lh/inside-the-high-street-cyberattacks)
+
+The BBC Episode that I have attached is a really good episode to watch and I would highly reccomend it - it follows the process of what happened during the hack and really shows how this "hack" has impacted a well-known buisness - with shelve shortages and more. It just goes to show how big of an impact any cyber attack has on the world as we start to become more of a cashless society and rely more and more on technology to store our data.
+
+I'd reccomend watching the episode - it is a really good watch :)
