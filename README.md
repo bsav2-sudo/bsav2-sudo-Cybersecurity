@@ -1,6 +1,6 @@
 <h1 align="left">Ben Savage</h1>
 
-<img src="https://tryhackme-badges.s3.amazonaws.com/bsavosi443.png" alt="Your Image Badge" />
+<img width="329" height="88" alt="bsavosi443" src="https://github.com/user-attachments/assets/7efa1592-b160-4012-ac6d-231ecddfa5e8" />
 
 <code>IT & AV Technician</code> <code>Cybersecurity</code>
 <h2 align="center">ISC2 Member | CCST Technician (Networking) | ISC2 Certified in Cybersecurity | ITIL v4 Foundation Certified </h2>
