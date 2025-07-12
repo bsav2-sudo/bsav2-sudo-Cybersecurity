@@ -10,9 +10,9 @@
 
 This project looks at **3** PCAP files obtained from the Wireshark Wiki page. The project demonstrates the understanding of utilising Wireshark and also being able to identify malicious traffic from PCAP files, ranging from small PCAP files to large captured files that have been collated over a number of dates. These PCAP files emulate the scenarios in which Network forensics may be required as evidence as part of an investigation, these range from a vulnerablity being exploited to an emulated recconaisance on a target which is seen in the real world. The ability to be able to identify these as part of a Cybersecurity role is very important, as it can help make firewall and IDS rules that can stop attacks from happening and also be able to determine malicious traffic from normal user traffic.
 
-## PCAP Analysis 
-
 <br>
+
+## PCAP Analysis 
 
 ## 11-DAYS-OF-SCAN
 
