@@ -67,4 +67,8 @@ Here's on straight away - this one got picked up for C2 Command and Control - ha
 
 >C2 Server == 5.252.153.241
 
+## Conclusion
+
+This exercise was a very interesting one but simulates what can happen in real life with users unknowingly downloading what may look to be a normal application turning out to be a malicious program. Being able to utilise my networking skills and also using an investigative mindset really helped me with this exercise as I was able to start joining dots on pieces of data which in turn gave me the answer I was looking for.
+
 Awesome that's the end of all the questions - thanks for looking at my walkthrough of how I've done this particular scenario - not as in-depth as some of my others but it gets to the point and it was fun to use a different package rather than just Wireshark.
