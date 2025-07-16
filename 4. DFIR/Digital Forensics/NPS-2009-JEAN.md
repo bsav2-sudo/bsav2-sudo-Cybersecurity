@@ -46,3 +46,7 @@ Something doesn't seem right about this - possibly sent to someone trying to imp
 ![4  Email Information](https://github.com/user-attachments/assets/09f2ea0f-92be-4c65-baa9-1363f981f6ac)
 
 Well that isn't Alisons email - looks like it went to an external email address - this is the point in which the data could have been obtained and spread - looks like a spearphishing attack on Jean - it doesn't look like anyone else was involved.
+
+## Conclusion 
+
+This investigation takes a real world example of how data can be leaked from an organisation and for me has taught me how valuable of an asset being able to conduct Digital Forensics is for an organisation - without being able to use tools such as Autopsy to look for forensic data - there wouldn't be any way of seeing the true story and could have had a bigger implication for both the buisness and the individuals. 
