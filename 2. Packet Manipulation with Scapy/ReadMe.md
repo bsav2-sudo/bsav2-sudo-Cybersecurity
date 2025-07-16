@@ -185,3 +185,5 @@ Another useful site that I used during this project was the site linked below wh
 ## Conclusion
 
 In conclusion from this project - I have learnt what a valuable asset Scapy is for being able to conduct tests of IT Security systems as the flexibility of being able to change fields to testing purposes is very easy to do and can make a difference in being able to test the accuracy of Firewall and IDS/IPS Rules. Scapy paired with Wireshark makes for an easy experience in crafting packets and seeing what they look like on the network.
+
+The ability as well to go from basic to more advanced fields for each crafted packet can also be a good exercise for network analysis as being able to pick up on parculiar behaviour is one of the key demands of being in the world of Cybersecurity.
