@@ -286,3 +286,9 @@ Let's say I want to implement a new rule in my Local Rules - I want to put in a 
 ![Local Rules Update - ICMP DoS Update](https://github.com/user-attachments/assets/ddd0a8d4-e8a0-455a-bc1e-24f138fa78ed)
 
 And it is that easy - I'm going to be looking at Snort more in the new year to see how I can generate rules such as these - so goodbye 2024, hello 2025! 🥳
+
+## Conclusion
+
+To summarise this exercise - being able to see and configure how an IDS/IPS works has gave me greater knowledge on how the systems actually work behind the scenes. The ability to configure an IDS/IPS to a certain degree can help with buisnesses different needs as some may need strict rules while others may need some more relaxed rules in order to complete buisness they require. 
+
+
