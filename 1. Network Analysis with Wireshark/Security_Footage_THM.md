@@ -82,6 +82,8 @@ Now I know at this point I could just make a python script to put all the images
 
 ## Conclusion
 
+By being able to complete this CTF challenge - I have been able to put my Digital Foresnics skills to the test in a scenario - there was quite a lot to get my head around with this task as there would be with any investigation but being able to utilise my network forensics skills and trial and error - I was able to get to the end result and all importantly Capture The Flag!
+
 This was quite a fun one to do - it took me a while to figure out foremost would be one of the tools I'd need to use but being able to navigate the PCAP was simple enough thanks to other PCAP analysis I've done in this portfolio and on other projects.
 
 Thanks for reading :)
