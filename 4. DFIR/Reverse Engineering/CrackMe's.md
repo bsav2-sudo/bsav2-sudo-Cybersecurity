@@ -289,3 +289,7 @@ After testing this it was a success and all "serials" - when the program is comp
 As you can see in the green highlight - the Windows API "IsDebuggerPresent" gets called - this API determines whether the calling process is being debugged by a user-mode debugger. This function allows an application to determine whether or not it is being debugged, so that it can modify its behavior. For example, an application could provide additional information using the OutputDebugString function if it is being debugged. (Microsoft, 2025)
 
 A way to get past this would be to put the value in the register as 0 when this function is called - as when a debugger is present the value is set to 1 and then tested with eax registers - if the value is 0 then it tells the program that no debugger is present and it can move on as normal.
+
+## Conclusion
+
+Overall I have really enjoyed this project - being able to reverse engineer these crack me's has been able to give me a better insight into how I may want to conduct malware analysis in future - with the same key indicators in mind such as anti-debugging techniques, obfuscation and more. As malware gets more and more advanced, the ability to research malware and pick them apart to find out how they are working under the hood can make future detetction easier as well as give other IT Operations units ways to be able to detect odd behaviour within systems.
