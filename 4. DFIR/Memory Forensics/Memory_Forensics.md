@@ -334,3 +334,7 @@ From there I get the same options as before on a Standard Collector and then I r
 ![Search Collector - Rest of info](https://github.com/user-attachments/assets/36a7b5cc-6ea0-4e2e-ae6d-e291bc2a9e85)
 
 Honestly I think the IOC Editor with the IOC Collector is amazing, if I have a large collection of IOC files that I have of known malware etc. then it makes it a really streamlined process to choose an IOC and then look for it on a system - the whole Redline process is really nice and really good as an investigative tool - definetly one for the future to keep using and use in real world scenarios!
+
+## Conclusion
+
+By being able to participate in this exercise - I have been able to try my Digital Forensics skills and have a look at all the packages available to conduct said forensics. As part of a security operation - I believe that Digital Forensics is a key skill to have as being able to collect and see the data can draw a better timeline of events and start to draw a version of events in the case of a security incident. As cyber-attacks are becoming more of a thing in the last couple of years - being able to get the information quickly and draw a timeline of events is vitally important not just for the team but for the wider buisness and those involved such as stakeholders.
