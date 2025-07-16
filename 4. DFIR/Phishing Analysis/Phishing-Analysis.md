@@ -87,3 +87,7 @@ DMARC (Domain-based Message Authentication, Reporting, and Conformance) is an au
 According to the DMARC documentation - "bestguesspass indicates that no DMARC TXT record exists for the domain exists. If the domain had a DMARC TXT record, the DMARC check for the message would have passed".
 
 Very cool to see how this email passed the authentication checks and how DMARC makes a best guess attempt when there is no DKIM signature available.
+
+## Conclusion 
+
+In conclusion - being able to have the skills to analyse a phishing email is vitally important as this is the most favoured type of attack by threat actors to gain access to systems - being able to identify these emails and how they are created/sent can help a security team in being able to engineer and detect more of these emails in future - while also giving a good indicator of what staff etc. should be trained on in terms of phishing simulations (i.e Fake Amazon Links).
