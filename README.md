@@ -2,10 +2,10 @@
 
 <img width="329" height="88" alt="bsavosi443" src="https://github.com/user-attachments/assets/7efa1592-b160-4012-ac6d-231ecddfa5e8" />
 
-<code>IT & AV Technician</code> <code>Cybersecurity</code>
+<code>IT Security Analyst</code> <code>Cybersecurity</code>
 <h2 align="center">ISC2 Member | CCST Technician (Networking) | ISC2 Certified in Cybersecurity | ITIL v4 Foundation Certified </h2>
 
-<p>🔭 I am currently working as an IT/AV Technician.</p>
+<p>🔭 I am currently working as an IT  Security Analyst.</p>
 <p>🥬 Currently I am working on my Cybersecurity skills including DFIR skills such as Reverse Engineering and Malware Analysis</p>
 <p>💻 My latest projects include conducting PCAP analysis, configuring Network Devices and Databases and understaning YARA and IDS rules</p>
 <p>👨‍🦱 Coming from a Live Events background - I bring a new way of creative thinking
